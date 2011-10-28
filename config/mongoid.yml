@@ -1,0 +1,26 @@
+mongohq:
+  host: 
+  port: 
+  database: 
+  username: 
+  password: 
+development:
+  host: localhost
+  database: portfolio_development
+
+test:
+  host: localhost
+  database: portfolio_test
+
+# set these environment variables on your prod server
+production:
+  host: <%= ENV['MONGOID_HOST'] %>
+  port: <%= ENV['MONGOID_PORT'] %>
+  username: <%= ENV['MONGOID_USERNAME'] %>
+  password: <%= ENV['MONGOID_PASSWORD'] %>
+  database: <%= ENV['MONGOID_DATABASE'] %>
+  # slaves:
+  #   - host: slave1.local
+  #     port: 27018
+  #   - host: slave2.local
+  #     port: 27019
