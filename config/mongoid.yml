@@ -1,9 +1,3 @@
-mongohq:
-  host: 
-  port: 
-  database: 
-  username: 
-  password: 
 development:
   host: localhost
   database: portfolio_development

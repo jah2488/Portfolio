@@ -1,6 +1,13 @@
 Portfolio::Application.routes.draw do
+  resources :projects
+
+  resources :posts
+
+  get "index/index"
+
   devise_for :users
 
+  root to: "index#index", as: '/'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

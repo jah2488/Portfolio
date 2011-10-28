@@ -1,0 +1,18 @@
+
+
+  - @posts.each do |post|
+    %article
+      %header
+        %td= post.title
+        %td= post.category
+        %td= post.pubdate
+      %td= post.body
+      %td= post.type
+      %td= post.notes
+      %td= link_to 'Show', post
+      %td= link_to 'Edit', edit_post_path(post)
+      %td= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Post', new_post_path
