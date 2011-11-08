@@ -1,6 +1,17 @@
 %section
   %article
     %header
-      %h1 HomePage
-      %date
-    %p llorum ipsome
+      %h1=   @post.title
+      %date= @post.pubdate
+      %div#notice=  @post.category
+    %div= @post.body
+    %div= @post.type
+    %div= @post.notes
+  %section
+    %p Comments Go Here
+
+%section
+  %article
+    %header
+      %h1= @project.title
+      %p Rest of Project Info

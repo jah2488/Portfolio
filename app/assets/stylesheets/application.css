@@ -211,34 +211,114 @@ table { border-collapse: collapse; border-spacing: 0; }
 td { vertical-align: top; }
 
 
+/*=============== nifty scaffold styles end -======================== (?) */
+#container {
+  width: 75%;
+  margin: 0 auto;
+  background-color: #FFF;
+  padding: 20px 40px;
+  border: solid 1px black;
+  margin-top: 20px;
+}
+
+#flash_notice, #flash_error {
+  padding: 5px 8px;
+  margin: 10px 0;
+}
+
+#flash_notice {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+}
+
+#flash_error {
+  background-color: #FCC;
+  border: solid 1px #C66;
+}
+
+.fieldWithErrors {
+  display: inline;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid #CF0000;
+  padding: 0px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 8px;
+}
+
+#errorExplanation ul {
+  margin: 2px 24px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: disc;
+}
+/*=============== nifty scaffold styles end -======================== (?) */
+
 /* ==|== primary styles =====================================================
    Author:
    ========================================================================== */
+
 body{
-	
+  border:1px solid black;
+  background: #333;
+  color:#144156;
 }
+
+a         {color:#B4FDF7; text-decoration:none;}
+a:hover   {color:#F20C0C;}
+a:visited {color:#327C8C;}
+a:visited:hover{color:#F20C0C;}
+
 #wrapper{
+  border:1px solid black;
 	margin: 0 auto;
-	width: 1024px;
+	width: 75%;
+  background: #B4FDF7;
+
 }
 header{
-	
+  border:1px solid black;
 }
-header hgroup {
-	float:right;
+header hgroup {  
+border:1px solid black;
+
 }
-header nav {
-	float:right;
-}
-header nav ul li{
-	float:left;
-}
+header nav          {float:left;border:1px solid black;}
+  header nav ul li  {float:left;padding: 0px 10px 0px 1px;}
+  header nav ul li a{font-size:16px; font-weight:bold;}
+
 #main{
+  margin:5px;
+  border:1px solid black;
+  padding:20px;
 }
 #content {
 	float:left;
+  border:1px solid black;
 }
 #sidebar {
+  border:1px solid black;
 	float:right;
 }
 
@@ -260,15 +340,74 @@ header nav ul li{
    These override the primary ('mobile first') styles
    Modify as content requires.
    ========================================================================== */
+/* 
 
-@media only screen and (min-width: 480px) {
-  /* Style adjustments for viewports 480px and over go here */
+Hardboiled CSS3 Media Queries by Andy Clarke:
+http://stuffandnonsense.co.uk/blog/about/hardboiled_css3_media_queries/
+
+Author: Andy Clarke
+Web site: http://stuffandnonsense.co.uk
+Twitter: http://twitter.com/malarkey
+
+Hardboiled Web Design
+Web site: http://hardboiledwebdesign.com
+Twitter: http://twitter.com/itshardboiled
+
+Version date : 30th September 2010
+Version: 0.9
+
+License: Creative Commons CC Zero Declaration. No Rights Reserved.
+
+*/
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+ #wrapper {
+   width:100%;
+ }
 
 }
 
-@media only screen and (min-width: 768px) {
-  /* Style adjustments for viewports 768px and over go here */
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+/* Styles */
+}
 
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+background-color:#ff00ff;
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 and high pixel ratio devices ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
 }
 
 

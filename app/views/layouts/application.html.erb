@@ -31,50 +31,43 @@
 	       Respond is a polyfill for min/max-width media queries. Modernizr enables HTML5 elements & feature detects; 
 	       for optimal performance, create your own custom Modernizr build: www.modernizr.com/download/ -->
 	  <script src="js/libs/modernizr-2.0.6.min.js"></script>
-	  <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
 	</head>
 	<body>
 	<div id="wrapper">
-		<header>
-			<hgroup>
-				<h1>Justin</h1>
-				<h2>Herrick</h2>
+		<header class="clearfix">
+			<hgroup class="clearfix">
+				<h1><%= link_to "JustinHerrick.com", "/" %></h1>
 			</hgroup>
-			<div class="clearfix" ></div>
-			<nav>
-				<ul>
-					<li> <%= link_to "Home", "/" %> </li>
-					<li> <%= link_to "Blog", posts_path %> </li>
-					<li> <%= link_to "Projects", projects_path %> </li>
-					<li> <%= link_to "Contact", "#" %> </li>
+			<nav class="clearfix">
+				<ul class="clearfix">
+					<li class="clearfix"> <%= link_to "Blog", posts_path %> </li>
+					<li class="clearfix"> <%= link_to "Projects", projects_path %> </li>
+					<li class="clearfix"> <%= link_to "Contact", "#" %> </li>
 				</ul>
 			</nav>
-		<div class="clearfix" ></div>
 		</header>
-		<div id="main" role="main">
+		<div id="main" role="main" class="clearfix">
 			<section id="content" class="span12">
 			  <%- flash.each do |name, msg| -%>
 			    <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
 			  <%- end -%>
 				<%= yield %>
 			</section>
-			<section id="sidebar" class="span4">
-				<p>Hi my name is </p><br/>
-				<p>Justin Herrick</p><br/>
-				<p>I am a</p><br/>
-				<p>Web Developer</p><br/>
-				<p>living in</p><br/>
-				<p>Tampa, Florida.</p><br/>
-				<hr>
-				<p>Here are</p><br/>
-				<p>Some Posts</p><br/>								
-				<p>Here are</p><br/>				
-				<p>Some Projects</p><br/>				
-				<p>You can also</p><br/>				
-				<p>Contact Me</p><br/>				
-			</section>
 		</div>
 		<footer>
+			<div id="About">
+				<h3>About Me</h3>
+				<div id="about-text">
+				  <p> llorem ipsom. My etc lored idium torems. </p>
+				</div>
+			</div>
+			<nav>
+				<ul class="clearfix">
+					<li class="clearfix"> <%= link_to "Blog", posts_path %> </li>
+					<li class="clearfix"> <%= link_to "Projects", projects_path %> </li>
+					<li class="clearfix"> <%= link_to "Contact", "#" %> </li>
+				</ul>
+			</nav>
 		</footer>
 	</div>
 
