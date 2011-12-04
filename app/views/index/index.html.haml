@@ -1,17 +1,50 @@
-%section
+%section#blog
   %article
     %header
+      #type= @post.type
       %h1=   @post.title
-      %date= @post.pubdate
-      %div#notice=  @post.category
-    %div= @post.body
-    %div= @post.type
-    %div= @post.notes
-  %section
-    %p Comments Go Here
+      %date @post.pubdate
+    %hr
+    #post
+      %p= @post.body
+    %footer
+      %div= @post.notes
+      #category= @post.category
+      #div= link_to "More Posts", posts_path
 
-%section
+  %article.-front
+    %header
+      #type= @post.type
+      %h1=   @post.title
+      %date @post.pubdate
+    %hr
+    #post
+      %p= @post.body
+    %footer
+      %div= @post.notes
+      #category= @post.category
+      #div= link_to "More Posts", posts_path
+
   %article
     %header
+      #type= @post.type
+      %h1=   @post.title
+      %date @post.pubdate
+    %hr
+    #post
+      %p= @post.body
+    %footer
+      %div= @post.notes
+      #category= @post.category
+      #div= link_to "More Posts", posts_path
+%section
+  %p Comments Go Here
+
+
+%section#project
+  %article
+    %header
+      #div
+        %img(src="http://placekitten.com/150/150")
       %h1= @project.title
       %p Rest of Project Info

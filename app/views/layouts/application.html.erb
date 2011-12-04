@@ -34,33 +34,53 @@
 	</head>
 	<body>
 	<div id="wrapper">
-		<header class="clearfix">
-			<hgroup class="clearfix">
+		<header id="nav-bar" class="">
+			<hgroup class="">
 				<h1><%= link_to "JustinHerrick.com", "/" %></h1>
+				<nav class="">
+					<ul class="clearfix">
+						<li class=""> <%= link_to "Blog", posts_path %> </li>
+						<li class=""> <%= link_to "Projects", projects_path %> </li>
+						<li class=""> <%= link_to "Contact", "#" %> </li>
+					</ul>
+				</nav>
 			</hgroup>
-			<nav class="clearfix">
-				<ul class="clearfix">
-					<li class="clearfix"> <%= link_to "Blog", posts_path %> </li>
-					<li class="clearfix"> <%= link_to "Projects", projects_path %> </li>
-					<li class="clearfix"> <%= link_to "Contact", "#" %> </li>
-				</ul>
-			</nav>
 		</header>
-		<div id="main" role="main" class="clearfix">
-			<section id="content" class="span12">
-			  <%- flash.each do |name, msg| -%>
-			    <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
-			  <%- end -%>
-				<%= yield %>
-			</section>
+		<div id="content-wrapper">
+			<div id="main" role="main" class="clearfix">
+				<section id="content" class="span12">
+				  <%- flash.each do |name, msg| -%>
+				    <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+				  <%- end -%>
+					<%= yield %>
+				</section>
+			</div>
 		</div>
-		<footer>
-			<div id="About">
-				<h3>About Me</h3>
-				<div id="about-text">
-				  <p> llorem ipsom. My etc lored idium torems. </p>
+		<div id="sidebar" role="sidebar">
+				<div id="icon">
+					<img src="http://placekitten.com/200/200" />
+				</div>
+				<div id="about-me">
+					<h2>About</h2>
+					<p> This is my site. etc etc etc.</p>
+					<p> You should hire me!</p>
+				</div>
+				<div id="social">
+					<h2>Follow Me</h2>
+					<ul>
+						<li>
+							Twitter
+						</li>
+						<li>
+							Facebook
+						</li>
+						<li>
+							Github
+						</li>
+					</ul>
 				</div>
 			</div>
+		<footer class="clearfix">
 			<nav>
 				<ul class="clearfix">
 					<li class="clearfix"> <%= link_to "Blog", posts_path %> </li>
@@ -70,11 +90,6 @@
 			</nav>
 		</footer>
 	</div>
-
-
-
-
-	  <!-- JavaScript at the bottom for fast page loading -->
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
@@ -87,6 +102,7 @@
   <!-- end scripts -->
 
 
+  <% unless Rails.env["development"] %>
   <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
        mathiasbynens.be/notes/async-analytics-snippet -->
   <script>
@@ -95,7 +111,7 @@
     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
     s.parentNode.insertBefore(g,s)}(document,'script'));
   </script>
-
+  <% end %>
   <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
        chromium.org/developers/how-tos/chrome-frame-getting-started -->
   <!--[if lt IE 7 ]>
