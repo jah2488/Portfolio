@@ -24,7 +24,9 @@
 	  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
 
 	  <link rel="stylesheet" href="css/style.css">
-	  
+	  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+	  <link href='http://fonts.googleapis.com/css?family=Caudex:400italic,700,400' rel='stylesheet' type='text/css'>
+
 	  <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
 
 	  <!-- All JavaScript at the bottom, except this Modernizr build incl. Respond.js
@@ -36,16 +38,25 @@
 	<div id="wrapper">
 		<header id="nav-bar" class="">
 			<hgroup class="">
-				<h1><%= link_to "JustinHerrick.com", "/" %></h1>
+				<h1><%= link_to "JUSTINHERRICK", "/" %></h1>
 				<nav class="">
 					<ul class="clearfix">
-						<li class=""> <%= link_to "Blog", posts_path %> </li>
-						<li class=""> <%= link_to "Projects", projects_path %> </li>
-						<li class=""> <%= link_to "Contact", "#" %> </li>
+						<li class=""> <%= link_to "BLOG", posts_path %> </li>
+						<li class=""> <%= link_to "PROJECTS", projects_path %> </li>
+						<li class=""> <%= link_to "CONTACT", "#" %> </li>
 					</ul>
 				</nav>
 			</hgroup>
 		</header>
+		<div id="mobile-nav">
+			<nav class="">
+				<ul class="clearfix">
+					<li class=""> <%= link_to "Blog", posts_path %> </li>
+					<li class=""> <%= link_to "Projects", projects_path %> </li>
+					<li class=""> <%= link_to "Contact", "#" %> </li>
+				</ul>
+			</nav>
+		</div>
 		<div id="content-wrapper">
 			<div id="main" role="main" class="clearfix">
 				<section id="content" class="span12">
@@ -58,18 +69,23 @@
 		</div>
 		<div id="sidebar" role="sidebar">
 				<div id="icon">
-					<img src="http://placekitten.com/200/200" />
+					<div class="border">
+						<img src="assets/me.jpg" />
+					</div>
 				</div>
 				<div id="about-me">
 					<h2>About</h2>
 					<p> This is my site. etc etc etc.</p>
-					<p> You should hire me!</p>
+					<p> Important Facts about me.</p>
 				</div>
 				<div id="social">
-					<h2>Follow Me</h2>
+					<h2>Obligatory Social Media Links</h2>
 					<ul>
 						<li>
 							Twitter
+						</li>
+						<li>
+							Forrst
 						</li>
 						<li>
 							Facebook
@@ -78,6 +94,9 @@
 							Github
 						</li>
 					</ul>
+				</div>
+				<div id="sidebar-content" >
+					<!-- Yield Sidebar Content -->
 				</div>
 			</div>
 		<footer class="clearfix">

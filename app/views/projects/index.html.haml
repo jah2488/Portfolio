@@ -1,34 +1,26 @@
-%h1 Listing projects
 
-%table
-  %tr
-    %th Title
-    %th Description
-    %th Language
-    %th Deployed
-    %th Start date
-    %th End date
-    %th Platform
-    %th Db
-    %th Notes
-    %th
-    %th
-    %th
+%section#sort
+  %h2 Sort and Search Projects
+  %hr
+  %input
+  %button Search
+  %p Sort Figures Here
 
+
+%section#project
   - @projects.each do |project|
-    %tr
-      %td= project.title
-      %td= project.description
-      %td= project.language
-      %td= project.deployed
-      %td= project.start_date
-      %td= project.end_date
-      %td= project.platform
-      %td= project.db
-      %td= project.notes
-      %td= link_to 'Show', project
-      %td= link_to 'Edit', edit_project_path(project)
-      %td= link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete
+    %article
+      %header
+        #div
+          %img(src="http://placekitten.com/150/150")
+        %h1= project.title
+      %p= project.description
+      %ul
+        %li= project.language
+        %li= project.platform
+        %li= project.database
+        %li= project.deployed
+      %p= project.notes
 
 %br
 

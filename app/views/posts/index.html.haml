@@ -1,16 +1,18 @@
 
-
-- @posts.each do |post|
+#blog
+  - @posts.each do |post|
     %article
-        %header
-            %div= post.title
-            %div= post.category
-            %div= post.pubdate
+      %header
+        #type= post.type
+        %h1= post.title
+        %date= post.pubdate
+      %hr
+      #post
         %div= post.body
-        %div= post.type
+      %footer
         %div= post.notes
+        #category= post.category
 
-
-%br
+  %br
 
 = link_to 'New Post', new_post_path

@@ -285,21 +285,33 @@ body{
   color:   #333;
 }
 
-a         {color:#B4FDF7; text-decoration:none;}
-a:hover   {color:#F20C0C;}
-a:visited {color:#327C8C;}
-a:visited:hover{color:#F20C0C;}
+p, ul li{
+  font-family: 'Caudex', serif;
+}
+
+a         {color: #FFF; text-decoration:none;}/*rgba(185,56,29,1);}*/
+a:hover   {color: #333;}/*#F20C0C;}*/
+a:visited {color: #FFF;}/*rgba(195,60,60,1);}*/
+a:visited:hover{color: #333;}/*#F20C0C;}*/
 
 #wrapper{
 
 }
-header{
+header, h1, h2, h3, h4, h5{
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 #nav-bar{
-  background: rgba(253, 243, 221, 1);
-  overflow: auto;
-  padding: 0 10px;
-  height: 60px;
+  background-image: -webkit-linear-gradient(bottom, #C81E23 5%, #FF1500 130%);
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.05, #C81E23),
+    color-stop(0.90, #FF1500));
+  /*background: rgba(200, 40, 32, 1);*/
+  overflow: hidden;
+  padding: 0 30px;
+  height: 55px;
   width: 100%;
   border-bottom: 1px solid #777;
   box-shadow: 0px 0px 8px #999;
@@ -307,16 +319,24 @@ header{
   z-index: 10000;
 }
 header h1, header h1 a {
-  font-size: 72px;
-  float: right;
-  margin: 0;
+  font-size: 44px;
+  float: left;
+  margin: 0px;
+  text-shadow: rgba(0, 0, 0, 0.5) -1px 0, rgba(0, 0, 0, 0.3) 0 -1px, rgba(255, 255, 255, 0.5) 0 1px, rgba(0, 0, 0, 0.3) -1px -2px;
+  line-height: 45px;
+
 }
 header hgroup {  
 
 }
-header nav          {float:left;}
-  header nav ul li  {float:left;padding: 0px 10px 0px 1px;}
-  header nav ul li a{font-size:18px;margin:0 10px; font-weight:bold;}
+header nav          {float:left; margin: 12px 70px;}
+  header nav ul li  {float:left;padding: 0px 120px 0px 1px;}
+  header nav ul li a{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size:20px;
+    font-weight:bold;
+    text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
+  }
 
 #content-wrapper{
   width: 65%;
@@ -350,9 +370,20 @@ header nav          {float:left;}
   top: 100px;
   left: 1000px;
 }
+.border {
+  border-radius: 6px;
+  border: 5px solid #C81E23;
+  overflow: auto;
+  width: 200px;
+  background: #C81E23;
+}
 #icon {
   margin: 16px auto;
+  width: 350px;
+}
+#icon img {
   width: 200px;
+  border-radius:5px;
 }
 #wrapper footer {
   display:block;
@@ -361,6 +392,102 @@ header nav          {float:left;}
   margin: 0 auto;
 }
 
+footer nav {
+  font-size:10px;
+}
+
+
+/** CODE SHARED BETWEEN INDEX PAGE AND ALSO POSTS PAGE AND PROJECTS PAGE **/
+* line 5, /Users/Kate/Documents/justins-files/portfolio/app/assets/stylesheets/index.css.scss */
+#blog {
+  padding-top: 10px;
+}
+/* line 9, /Users/Kate/Documents/justins-files/portfolio/app/assets/stylesheets/index.css.scss */
+#blog article {
+  width: 98%;
+  background: #FFF;
+  margin: 20px auto;
+  box-shadow: 0px 0px 4px #555;
+  border-radius: 5px;
+}
+/* line 16, /Users/Kate/Documents/justins-files/portfolio/app/assets/stylesheets/index.css.scss */
+#blog article header {
+  padding: 5px 5px 5px 0px;
+  height: 70px;
+  display: block;
+}
+/* line 23, /Users/Kate/Documents/justins-files/portfolio/app/assets/stylesheets/index.css.scss */
+#blog article header h1 {
+  margin-bottom: 10px;
+  font-size: 42px;
+  font-weight:bold;
+  color: #555;
+  text-align: right;
+  margin-right: 20px;
+  margin-top: 10px;
+  float: right;
+  text-shadow:none;
+}
+/* line 32, /Users/Kate/Documents/justins-files/portfolio/app/assets/stylesheets/index.css.scss */
+#blog article header date {
+  position: relative;
+  top: 55px;
+  left: 583px;
+  clear: both;
+  margin-right: 20px;
+  font-style: normal;
+  font-size: 14px;
+  color: #999;
+}
+/* line 43, /Users/Kate/Documents/justins-files/portfolio/app/assets/stylesheets/index.css.scss */
+#blog article header #type {
+  float: left;
+  background: #B9381D;
+  width: 64px;
+  height: 64px;
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: -2px 2px 4px #555 inset;
+  margin-top: 5px;
+  margin-left: 9px;
+}
+/* line 53, /Users/Kate/Documents/justins-files/portfolio/app/assets/stylesheets/index.css.scss */
+#blog article hr {
+  width: 70%;
+  margin: 0 auto;
+  background: #333;
+  height: 1px;
+}
+/* line 59, /Users/Kate/Documents/justins-files/portfolio/app/assets/stylesheets/index.css.scss */
+#blog article #post {
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+/* line 63, /Users/Kate/Documents/justins-files/portfolio/app/assets/stylesheets/index.css.scss */
+#blog article #post p {
+  text-align: left;
+  line-height: 28px;
+}
+
+/* line 76, /Users/Kate/Documents/justins-files/portfolio/app/assets/stylesheets/index.css.scss */
+#project article {
+  margin: 5px;
+  padding: 5px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: -0.5px 0.5px 4px #555555 inset;
+  overflow: auto;
+}
+#project article header {
+  overflow:auto;
+}
+/* line 94, /Users/Kate/Documents/justins-files/portfolio/app/assets/stylesheets/index.css.scss */
+#project article header img {
+  float: left;
+  clear: both;
+  margin: 15px;
+  width: 150px;
+  height: 150px;
+}
 
 
 
@@ -369,11 +496,29 @@ header nav          {float:left;}
 
 
 
-
-
-
-
-
+#mobile-nav {
+  display:none;
+  padding-top: 50px;
+}
+#mobile-nav nav ul {
+  float: left;
+}
+#mobile-nav nav li {
+float: left;
+width:65px;
+text-align:center;
+padding: 1px 8px;
+border-radius: 10px;
+border: 1px solid #CCC;
+background: white;
+box-shadow: 1px 1px 3px #999;
+-webkit-box-shadow: 1px 1px 2px #999;/*inset;*/
+margin-top: 8px;
+margin-left: 20px;
+}
+#mobile-nav nav li:active {
+  background:#CCC;
+}
 /* ==|== media queries ======================================================
    PLACEHOLDER Media Queries for Responsive Design.
    These override the primary ('mobile first') styles
@@ -404,7 +549,27 @@ License: Creative Commons CC Zero Declaration. No Rights Reserved.
  #wrapper {
    width:100%;
  }
-
+ #mobile-nav{
+   display:inline !important;
+   width: 100%;
+   float:left;
+ }
+#mobile-nav nav ul li a {
+  color:#333;
+}
+ #blog {
+   width: 100%;
+   margin:1px;
+ }
+ #content-wrapper{
+   width:100%;
+   padding: 0px 0px;
+   margin:1px;
+ }
+ #main {
+   width:100%;
+   margin: 1px;
+ }
 }
 
 /* Smartphones (landscape) ----------- */
@@ -414,7 +579,8 @@ License: Creative Commons CC Zero Declaration. No Rights Reserved.
 
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width : 320px) {
-background-color:#ff00ff;
+
+
 }
 
 /* iPads (portrait and landscape) ----------- */
@@ -430,6 +596,12 @@ background-color:#ff00ff;
 /* iPads (portrait) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
 /* Styles */
+  header nav {
+    margin: 24px 15px;
+  }
+  header nav ul li {
+    padding: 0px 40px 0px 1px;
+  }
 }
 
 /* Desktops and laptops ----------- */

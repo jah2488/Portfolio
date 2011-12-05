@@ -2,84 +2,86 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#blog {
+// #blog {
 
-	padding-top: 10px;
+// 	padding-top: 10px;
 
-	article{
-		width: 98%;
-		background: #EEE; //rgba(245,243,243,.9);
-		margin: 20px auto;
-		box-shadow: 0px 0px 4px #555;
-		border-radius: 5px;
+// 	article{
+// 		width: 98%;
+// 		background: #FFF; //rgba(245,243,243,.9);
+// 		margin: 20px auto;
+// 		box-shadow: 0px 0px 4px #555;
+// 		border-radius: 5px;
 
-		header{
+// 		header{
 
-			padding:5px 5px 5px 0px;
-			// margin-top:5px;
-			height: 70px;
-			display:block;
+// 			padding:5px 5px 5px 0px;
+// 			// margin-top:5px;
+// 			height: 70px;
+// 			display:block;
 
-			h1{
-				margin-bottom:10px;
-				font-size: 30px;
-				color: #555;
-				text-align:right;
-				margin-right: 20px;
-				margin-top:10px;
-			}	
-			date{
-				// float:right;
-				position:relative;
-				top: 55px;
-				left: 583px;
-				clear:both;
-				margin-right: 20px;
-				font-style:italic;
-				font-size:12px;
-				color: #999;
-			}
-			#type{
-				float  : left;
-				background  : #F20C0C;
-				width  : 64px;
-				height : 64px;
-				border-radius: 0px 65px 65px 0px;
-				box-shadow: 10px 1px 1px #333;
-				margin-top:5px;	
-			}		
-		}
-		hr {
-			width: 70%;
-			margin: 0 auto;
-			background: #333;
-			height:1px;
-		}
-		#post{
-			margin: 0 auto;
-			padding: 10px 20px;
-		}
-		#category{
+// 			h1{
+// 				margin-bottom:10px;
+// 				font-size: 30px;
+// 				color: #555;
+// 				text-align:right;
+// 				margin-right: 20px;
+// 				margin-top:10px;
+// 				float:right;
+// 			}	
+// 			date{
+// 				// float:right;
+// 				position:relative;
+// 				top: 55px;
+// 				left: 583px;
+// 				clear:both;
+// 				margin-right: 20px;
+// 				font-style:italic;
+// 				font-size:12px;
+// 				color: #999;
+// 			}
+// 			#type{
+// 				float  : left;
+// 				background  : rgba(185,56,29,1);
+// 				width  : 64px;
+// 				height : 64px;
+// 				border-radius: 0px 5px 5px 0px;
+// 				box-shadow: -2px 2px 4px #555 inset;
+// 				margin-top:5px;	
+// 			}		
+// 		}
+// 		hr {
+// 			width: 70%;
+// 			margin: 0 auto;
+// 			background: #333;
+// 			height:1px;
+// 		}
+// 		#post{
+// 			margin: 0 auto;
+// 			padding: 10px 20px;
+// 		}
+// 		#post p {
+// 			text-align:left;
+// 			line-height:12px;
+// 		}
+// 		#category{
 			
-		}
+// 		}
 	
-	}
+// 	}
 
 
-}
+// }
 
 #project {
-	margin: 5px;
-	padding: 5px;
-	background: rgb(11,24,30);
-	
-	border-radius: 10px;
-	box-shadow: 2px 2px 3px #333;
-
-	overflow:auto;
-
 	article {
-
+		margin: 5px;
+		padding: 5px;
+		background: #fff;
+		border-radius: 10px;
+		box-shadow: -0.5px 0.5px 4px #555 inset;
+		overflow:auto;
+		
 		header {
 		
 			h1 {
