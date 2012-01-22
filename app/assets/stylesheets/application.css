@@ -290,9 +290,9 @@ p, ul li{
 }
 
 a         {color: #FFF; text-decoration:none;}/*rgba(185,56,29,1);}*/
-a:hover   {color: #333;}/*#F20C0C;}*/
+a:hover   {color: #AAA;}/*#F20C0C;}*/
 a:visited {color: #FFF;}/*rgba(195,60,60,1);}*/
-a:visited:hover{color: #333;}/*#F20C0C;}*/
+a:visited:hover{color: #F2C0C0C;}/*#F20C0C;}*/
 
 #wrapper{
 
@@ -307,7 +307,7 @@ header, h1, h2, h3, h4, h5{
     left bottom,
     left top,
     color-stop(0.05, #C81E23),
-    color-stop(0.90, #FF1500));
+    color-stop(0.95, #FF1500));
   /*background: rgba(200, 40, 32, 1);*/
   overflow: hidden;
   padding: 0 30px;
@@ -323,14 +323,15 @@ header h1, header h1 a {
   float: left;
   margin: 0px;
   text-shadow: rgba(0, 0, 0, 0.5) -1px 0, rgba(0, 0, 0, 0.3) 0 -1px, rgba(255, 255, 255, 0.5) 0 1px, rgba(0, 0, 0, 0.3) -1px -2px;
-  line-height: 45px;
+  line-height: 51px;
 
 }
 header hgroup {  
 
 }
-header nav          {float:left; margin: 12px 70px;}
+header nav          {float:left; margin: 12px 0px 0px 70px;}
   header nav ul li  {float:left;padding: 0px 120px 0px 1px;}
+  header nav ul li.contact { padding: 0px 0px 0px 1px;}
   header nav ul li a{
     font-family: 'Open Sans Condensed', sans-serif;
     font-size:20px;
@@ -344,7 +345,7 @@ header nav          {float:left; margin: 12px 70px;}
   clear: both;
   overflow: auto;
   position: relative;
-  padding: 100px 0px;
+  padding: 48px 0px;
   /*background: white;*/
   margin-left: 20px;
 /*  box-shadow: 0px 0px 15px #AAA inset;*/
@@ -365,10 +366,10 @@ header nav          {float:left; margin: 12px 70px;}
   margin: 0 auto;
 }
 #sidebar {
-  float: right;
   position: fixed;
-  top: 100px;
-  left: 1000px;
+  top: 5%;
+  right: 10px;
+  margin-right: 10px;
 }
 .border {
   border-radius: 6px;
@@ -376,9 +377,12 @@ header nav          {float:left; margin: 12px 70px;}
   overflow: auto;
   width: 200px;
   background: #C81E23;
+  -webkit-box-shadow: 1px 1px 2px #999;
+  -moz-box-shadow: 1px 1px 2px #999;
+  box-shadow: 1px 1px 2px #999;
 }
 #icon {
-  margin: 16px auto;
+  margin: 42px auto 5px;
   width: 350px;
 }
 #icon img {
@@ -398,7 +402,7 @@ footer nav {
 
 
 /** CODE SHARED BETWEEN INDEX PAGE AND ALSO POSTS PAGE AND PROJECTS PAGE **/
-* line 5, /Users/Kate/Documents/justins-files/portfolio/app/assets/stylesheets/index.css.scss */
+/* line 5, /Users/Kate/Documents/justins-files/portfolio/app/assets/stylesheets/index.css.scss */
 #blog {
   padding-top: 10px;
 }
@@ -417,7 +421,7 @@ footer nav {
   display: block;
 }
 /* line 23, /Users/Kate/Documents/justins-files/portfolio/app/assets/stylesheets/index.css.scss */
-#blog article header h1 {
+#blog article header h1,#blog article header h1 a{
   margin-bottom: 10px;
   font-size: 42px;
   font-weight:bold;
@@ -432,9 +436,7 @@ footer nav {
 #blog article header date {
   position: relative;
   top: 55px;
-  left: 583px;
-  clear: both;
-  margin-right: 20px;
+  right: 0px;
   font-style: normal;
   font-size: 14px;
   color: #999;
@@ -488,17 +490,47 @@ footer nav {
   width: 150px;
   height: 150px;
 }
+#project p{
+  float: right;
+  width:  75%;
+}
+#social ul li {
+  list-style:none;
+  height: 32px;
+  width: 32px;
+  padding:0px;
+  margin:5px;
+}
+#social ul li:hover {
+  opacity:.6;
+  -webkit-transition: 1sec;
+  -webkit-transform: rotate(-10deg);
+}
+#social ul li a{
+  height: 32px;
+  width: 32px;
+  padding-top: 11px;
+  padding-left: 32px;
+}
+.twitter{
+  background-image: url(./32/twitter.png);
+}
 
+.facebook{
+  background-image: url(./32/facebook.png);
+}
 
+.forrst{
+  background-image: url(./32/forrst.png);
+}
 
-
-
-
-
+.buzz{
+  background-image: url(./32/buzz.png);
+}
 
 #mobile-nav {
   display:none;
-  padding-top: 50px;
+  padding-top: 53px;
 }
 #mobile-nav nav ul {
   float: left;
@@ -554,9 +586,9 @@ License: Creative Commons CC Zero Declaration. No Rights Reserved.
    width: 100%;
    float:left;
  }
-#mobile-nav nav ul li a {
+ #mobile-nav nav ul li a {
   color:#333;
-}
+ }
  #blog {
    width: 100%;
    margin:1px;
@@ -569,6 +601,9 @@ License: Creative Commons CC Zero Declaration. No Rights Reserved.
  #main {
    width:100%;
    margin: 1px;
+ }
+ #sidebar {
+   display:none;
  }
 }
 
@@ -586,7 +621,8 @@ License: Creative Commons CC Zero Declaration. No Rights Reserved.
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
 /* Styles */
-}
+  header nav          {float:left; margin: 12px 20px;}
+  header nav ul li  {float:left;padding: 0px 30px 0px 1px;}}
 
 /* iPads (landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
@@ -596,12 +632,7 @@ License: Creative Commons CC Zero Declaration. No Rights Reserved.
 /* iPads (portrait) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
 /* Styles */
-  header nav {
-    margin: 24px 15px;
-  }
-  header nav ul li {
-    padding: 0px 40px 0px 1px;
-  }
+  
 }
 
 /* Desktops and laptops ----------- */

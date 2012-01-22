@@ -5,4 +5,7 @@ class IndexController < ApplicationController
   	@project = Project.last
   end
 
+  def contact
+  end
+
 end

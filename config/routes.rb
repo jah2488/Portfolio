@@ -1,13 +1,16 @@
 Portfolio::Application.routes.draw do
-  resources :projects
 
+  get "dashboard/index"
+  match "/contact" => "index#contact", as: :contact
+  resources :projects
   resources :posts
 
-  get "index/index"
-
   devise_for :users
-
+  
+  match '/dashboard' => "dashboard#index", as: :user_root
+    
   root to: "index#index", as: '/'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

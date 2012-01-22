@@ -1,0 +1,17 @@
+%h1 Dashboard
+
+#stats
+  %h1 Stats
+  #posts
+    %h3= pluralize(@posts.count, "post")
+    #div= link_to "New Post", new_post_path
+    %h4 Edit Posts
+    - @posts.each do |post|
+      #div= link_to post.title, edit_post_path(post)
+  %hr
+  #projects
+    %h3= pluralize(@projects.count, "project")
+    #div= link_to "New Post", new_project_path
+    %h4 Edit Posts
+    - @projects.each do |project|
+      #div= link_to project.title, edit_project_path(project)

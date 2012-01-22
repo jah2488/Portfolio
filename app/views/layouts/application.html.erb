@@ -43,7 +43,7 @@
 					<ul class="clearfix">
 						<li class=""> <%= link_to "BLOG", posts_path %> </li>
 						<li class=""> <%= link_to "PROJECTS", projects_path %> </li>
-						<li class=""> <%= link_to "CONTACT", "#" %> </li>
+						<li class="contact"> <%= link_to "CONTACT", contact_path %> </li>
 					</ul>
 				</nav>
 			</hgroup>
@@ -53,7 +53,7 @@
 				<ul class="clearfix">
 					<li class=""> <%= link_to "Blog", posts_path %> </li>
 					<li class=""> <%= link_to "Projects", projects_path %> </li>
-					<li class=""> <%= link_to "Contact", "#" %> </li>
+					<li class=""> <%= link_to "Contact", contact_path %> </li>
 				</ul>
 			</nav>
 		</div>
@@ -81,17 +81,17 @@
 				<div id="social">
 					<h2>Obligatory Social Media Links</h2>
 					<ul>
-						<li>
-							Twitter
+						<li class="1twitter">
+							<%= link_to "", "http://twitter.com/jah2488",  :class => "twitter" %>
 						</li>
-						<li>
-							Forrst
+						<li class="1forrst">
+							<%= link_to "", "http://forrst.me/jah2488",    :class => "forrst" %>
 						</li>
-						<li>
-							Facebook
+						<li class="1facebook">
+							<%= link_to "", "http://facebook.com/jah2488", :class => "facebook" %>
 						</li>
-						<li>
-							Github
+						<li class="1buzz">
+							<%= link_to "", "http://github.com/jah2488",   :class => "github" %>
 						</li>
 					</ul>
 				</div>
@@ -104,7 +104,7 @@
 				<ul class="clearfix">
 					<li class="clearfix"> <%= link_to "Blog", posts_path %> </li>
 					<li class="clearfix"> <%= link_to "Projects", projects_path %> </li>
-					<li class="clearfix"> <%= link_to "Contact", "#" %> </li>
+					<li class="clearfix"> <%= link_to "Contact", contact_path %> </li>
 				</ul>
 			</nav>
 		</footer>

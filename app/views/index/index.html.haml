@@ -1,10 +1,12 @@
 %section#blog
   %article
     %header
-      #type= @post.type
-      %h1=   @post.title
       %date @post.pubdate
+      #type= @post.type
+      %h1= link_to(@post.title, @post)
     %hr
+    #share
+
     #post
       %p= @post.body
     %footer

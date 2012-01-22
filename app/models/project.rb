@@ -10,4 +10,8 @@ class Project
   field :platform,    type: String
   field :database,    type: String
   field :notes,       type: String
+
+  def search(query)
+    find(query)
+  end
 end

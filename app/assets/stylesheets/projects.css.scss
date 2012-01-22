@@ -2,8 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#projects{
+	padding-top:10px;
+}
+
 section #sort {
-	margin: 5px;
+	margin: 20px 5px;
 	padding: 5px;
 	background: #fff;
 	
@@ -11,4 +15,11 @@ section #sort {
 	box-shadow: 0.5px -0.5px 4px #555;
 
 	overflow:auto;
+}
+a {
+	color: #333;
+	text-shadow: 1px 1px 1px #999;
+}
+a:hover {
+	color: #666;
 }
