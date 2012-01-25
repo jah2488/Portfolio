@@ -1,23 +1,21 @@
-%p#notice= notice
+%article
+  %header
+    %hgroup
+      %date= time_ago_in_words(@post.pubdate)
+      #type{ :class => @post.type }.
+      %h1= link_to(@post.title, @post)
+  %br
+  %hr.clearfix
+  #share
 
-%p
-  %b Title:
-  = @post.title
-%p
-  %b Body:
-  = @post.body
-%p
-  %b Category:
-  = @post.category
-%p
-  %b Pubdate:
-  = @post.pubdate
-%p
-  %b Type:
-  = @post.type
-%p
-  %b Notes:
-  = @post.notes
+  #post
+    %p= @post.body
+  %footer
+    %div= @post.notes if @post.notes.length > 1
+    #category= @post.category
+    #div= link_to "View More Posts", posts_path
+  %section
+    %p Comments Go Here
 
 = if current_user
   = link_to 'Edit', edit_post_path(@post)

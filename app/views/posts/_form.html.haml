@@ -16,11 +16,8 @@
     = f.label :category
     = f.text_field :category
   .field
-    = f.label :pubdate
-    = f.date_select :pubdate
-  .field
     = f.label :type
-    = f.text_field :type
+    = f.select :type, ["post", "picture", "video", "quote"]
   .field
     = f.label :notes
     = f.text_area :notes

@@ -1,12 +1,12 @@
 #projects
-  %section#sort
-    %h2 Sort and Search Projects
-    %hr
-    %input
-    %button Search
-    %p Sort Figures Here
-    - @projects.each do |project|
-      = link_to project.title, project_path(project)
+  / %section#sort
+  /   %h2 Sort and Search Projects
+  /   %hr
+  /   %input
+  /   %button Search
+  /   %p Sort Figures Here
+  /   - @projects.each do |project|
+  /     = link_to project.title, project_path(project)
 
 
   %section#project
@@ -15,7 +15,7 @@
         %header
           #div
             %img(src="http://placekitten.com/150/150")
-          %h1= project.title
+          %h1= link_to project.title, project
         %p= project.description
         %ul
           %li= project.language
@@ -27,3 +27,6 @@
   %br
 
   =  link_to 'New Project', new_project_path if current_user
+
+= content_for :sidebar do
+  %p Splash Sidebar content for Projects page

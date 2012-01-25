@@ -1,33 +1,18 @@
-%p#notice= notice
+%article
+  %header
+    #div
+      %img(src="http://placekitten.com/150/150")
+    %h1= link_to @project.title, @project
+  %p= @project.description
+  %ul
+    %li= @project.language
+    %li= @project.platform
+    %li= @project.database
+    %li= @project.deployed
+  %p= @project.notes
 
-%p
-  %b Title:
-  = @project.title
-%p
-  %b Description:
-  = @project.description
-%p
-  %b Language:
-  = @project.language
-%p
-  %b Deployed:
-  = @project.deployed
-%p
-  %b Start date:
-  = @project.start_date
-%p
-  %b End date:
-  = @project.end_date
-%p
-  %b Platform:
-  = @project.platform
-%p
-  %b Db:
-  = @project.db
-%p
-  %b Notes:
-  = @project.notes
 
-= link_to 'Edit', edit_project_path(@project)
-\|
-= link_to 'Back', projects_path
+= if current_user
+  = link_to 'Edit', edit_project_path(@project)
+  \|
+  = link_to 'Back', projects_path

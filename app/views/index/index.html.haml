@@ -1,46 +1,21 @@
 %section#blog
   %article
     %header
-      %date @post.pubdate
-      #type= @post.type
-      %h1= link_to(@post.title, @post)
-    %hr
+      %hgroup
+        #type{ :class => @post.type }.
+        %h1= link_to(@post.title, @post)
+        %date= time_ago_in_words(@post.pubdate)
+    %hr.clearfix
     #share
 
     #post
       %p= @post.body
     %footer
-      %div= @post.notes
+      %div= @post.notes if @post.notes.length > 1
       #category= @post.category
-      #div= link_to "More Posts", posts_path
-
-  %article.-front
-    %header
-      #type= @post.type
-      %h1=   @post.title
-      %date @post.pubdate
-    %hr
-    #post
-      %p= @post.body
-    %footer
-      %div= @post.notes
-      #category= @post.category
-      #div= link_to "More Posts", posts_path
-
-  %article
-    %header
-      #type= @post.type
-      %h1=   @post.title
-      %date @post.pubdate
-    %hr
-    #post
-      %p= @post.body
-    %footer
-      %div= @post.notes
-      #category= @post.category
-      #div= link_to "More Posts", posts_path
-%section
-  %p Comments Go Here
+      #div= link_to "View More Posts", posts_path
+    %section
+      %p Comments Go Here
 
 
 %section#project
@@ -50,3 +25,6 @@
         %img(src="http://placekitten.com/150/150")
       %h1= @project.title
       %p Rest of Project Info
+
+= content_for :sidebar do
+  %p Splash Sidebar content for index page

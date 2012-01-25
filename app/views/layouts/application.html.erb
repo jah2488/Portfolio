@@ -22,8 +22,6 @@
 	  <meta name="viewport" content="width=device-width,initial-scale=1">
 
 	  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
-
-	  <link rel="stylesheet" href="css/style.css">
 	  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 	  <link href='http://fonts.googleapis.com/css?family=Caudex:400italic,700,400' rel='stylesheet' type='text/css'>
 
@@ -77,17 +75,7 @@
 					</div>
 				</div>
 				<div id="about-me">
-					<h2>Welcome</h2>
-					<p> My name is Justin and I make web apps,
-					 I provide app and startup consultation,
-					 I like to make things that work.
-					 I like creativity, novelty, and believe
-					 that less is more.</p>
-					<p class="hire">I'm available for hire!<br/>
-					<%= link_to "Contact Me if you're Interested", contact_path %></p>
-				</div>
 				<div id="social">
-					<h2>Obligatory Social Media Links</h2>
 					<ul>
 						<li class="1twitter">
 							<%= link_to "", "http://twitter.com/jah2488",  :class => "twitter" %>
@@ -103,8 +91,16 @@
 						</li>
 					</ul>
 				</div>
+					<p> My name is Justin and I make web apps,
+					 I provide app and startup consultation,
+					 I like to make things that work.
+					 I like creativity, novelty, and believe
+					 that less is more.</p>
+					<p class="hire">I'm available for hire!<br/>
+					<%= link_to "Contact Me if you're Interested", contact_path %></p>
+				</div>
 				<div id="sidebar-content" >
-					<!-- Yield Sidebar Content -->
+					<%= yield :sidebar %>
 				</div>
 			</div>
 		<footer class="clearfix">

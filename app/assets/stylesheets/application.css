@@ -291,6 +291,7 @@ p, ul li{
 
 a         {color: #FFF; text-decoration:none;}/*rgba(185,56,29,1);}*/
 a:hover   {color: #AAA;}/*#F20C0C;}*/
+a:active  {color: #F2C0C0C;}
 a:visited {color: #FFF;}/*rgba(195,60,60,1);}*/
 a:visited:hover{color: #F2C0C0C;}/*#F20C0C;}*/
 
@@ -320,11 +321,17 @@ header, h1, h2, h3, h4, h5{
 }
 header h1, header h1 a {
   font-size: 44px;
+  /*float: left;*/
+  margin: 0px;
+  text-shadow: rgba(0, 0, 0, 0.5) -1px 0, rgba(0, 0, 0, 0.3) 0 -1px, rgba(255, 255, 255, 0.5) 0 1px, rgba(0, 0, 0, 0.3) -1px -2px;
+  line-height: 51px;
+}
+#nav-bar header h1, header h1 a {
+  font-size: 44px;
   float: left;
   margin: 0px;
   text-shadow: rgba(0, 0, 0, 0.5) -1px 0, rgba(0, 0, 0, 0.3) 0 -1px, rgba(255, 255, 255, 0.5) 0 1px, rgba(0, 0, 0, 0.3) -1px -2px;
   line-height: 51px;
-
 }
 header hgroup {  
 
@@ -420,6 +427,10 @@ footer nav {
   height: 70px;
   display: block;
 }
+#blog article header hgroup {
+  display: block;
+  overflow:auto;
+}
 /* line 23, /Users/Kate/Documents/justins-files/portfolio/app/assets/stylesheets/index.css.scss */
 #blog article header h1,#blog article header h1 a{
   margin-bottom: 10px;
@@ -427,16 +438,14 @@ footer nav {
   font-weight:bold;
   color: #555;
   text-align: right;
-  margin-right: 20px;
-  margin-top: 10px;
-  float: right;
+  margin-top: 8px;
+  margin-left: 10px;
+  float: left;
   text-shadow:none;
 }
 /* line 32, /Users/Kate/Documents/justins-files/portfolio/app/assets/stylesheets/index.css.scss */
 #blog article header date {
-  position: relative;
-  top: 55px;
-  right: 0px;
+  float:right;
   font-style: normal;
   font-size: 14px;
   color: #999;
@@ -461,6 +470,7 @@ footer nav {
 }
 /* line 59, /Users/Kate/Documents/justins-files/portfolio/app/assets/stylesheets/index.css.scss */
 #blog article #post {
+  display: block;
   margin: 0 auto;
   padding: 10px 20px;
 }
@@ -494,7 +504,14 @@ footer nav {
   float: right;
   width:  75%;
 }
+#social ul { 
+  float: left;
+  clear:both;
+  margin: 0 auto;
+  width: 85%;
+}
 #social ul li {
+  float: left;
   list-style:none;
   height: 32px;
   width: 32px;
@@ -504,13 +521,23 @@ footer nav {
 #social ul li:hover {
   opacity:.6;
   -webkit-transition: 1sec;
-  -webkit-transform: rotate(-10deg);
+  /*-webkit-transform: rotate(-10deg);*/
 }
 #social ul li a{
   height: 32px;
   width: 32px;
-  padding-top: 11px;
+  padding-top: 14px;
   padding-left: 32px;
+}
+p.hire {
+  padding-left: 0px;
+  text-align:center;
+  text-shadow: -1px 1px 2px #CCC;
+  background-color:rgba(170,42,39,.6);
+  border-bottom: 2px solid rgba(170,42,39,1);
+}
+p.hire:hover{
+  background-color:rgba(170,42,39,.8);
 }
 .twitter{
   background-image: url(./32/twitter.png);
@@ -581,6 +608,9 @@ License: Creative Commons CC Zero Declaration. No Rights Reserved.
  #wrapper {
    width:100%;
  }
+ header#nav-bar hgroup h1 a {
+   font-size: 32px;
+ }
  #mobile-nav{
    display:inline !important;
    width: 100%;
@@ -588,6 +618,19 @@ License: Creative Commons CC Zero Declaration. No Rights Reserved.
  }
  #mobile-nav nav ul li a {
   color:#333;
+ }
+ section#blog article header hgroup div#type {
+   display: none;
+ }
+ section#blog article header hgroup h1 a {
+   font-size: 22px;
+   display: block;
+   width:100%;
+   height:100%;
+   text-align:center;
+   margin: 0px;
+   clear:both;
+   line-height:20px;
  }
  #blog {
    width: 100%;
