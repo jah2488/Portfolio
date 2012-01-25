@@ -1,5 +1,6 @@
 class Post
   include Mongoid::Document
+  include Mongoid::Slug
   include Mongoid::Timestamps
   field :title,    type: String
   field :body,     type: String
@@ -10,10 +11,12 @@ class Post
   
   before_save :set_date
 
+  slug :title
 
   private
 
   def set_date
   	self.pubdate = self.created_at
   end
+
 end
