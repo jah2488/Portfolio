@@ -44,6 +44,9 @@
 						<li class=""> <%= link_to "BLOG", posts_path %> </li>
 						<li class=""> <%= link_to "PROJECTS", projects_path %> </li>
 						<li class="contact"> <%= link_to "CONTACT", contact_path %> </li>
+						<% if current_user %>
+							<li class=""> <%= link_to "logout", destroy_user_session_path %></li>
+						<% end %>
 					</ul>
 				</nav>
 			</hgroup>

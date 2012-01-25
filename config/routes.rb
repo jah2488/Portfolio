@@ -9,7 +9,7 @@ Portfolio::Application.routes.draw do
   
   match '/dashboard' => "dashboard#index", as: :user_root
     
-  root to: "index#index", as: '/'
+  root to: "index#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
