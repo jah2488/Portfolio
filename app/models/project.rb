@@ -1,5 +1,6 @@
 class Project
   include Mongoid::Document
+  include Mongoid::Slug
   include Mongoid::Timestamps
   field :title,       type: String
   field :description, type: String
@@ -11,6 +12,9 @@ class Project
   field :database,    type: String
   field :notes,       type: String
 
+
+  slug :title
+  
   def search(query)
     find(query)
   end
