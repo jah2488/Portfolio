@@ -1,0 +1,7 @@
+%section#project
+  %article
+    %header
+      #div
+        = image_tag @project.screenshot.url(:small)
+      %h1= link_to @project.title, @project
+      %p Rest of Project Info

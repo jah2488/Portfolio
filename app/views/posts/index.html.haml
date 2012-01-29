@@ -4,14 +4,15 @@
     %article
       %header
         #type{ :class => post.type }.
-        %h1= post.title
-        %date= post.pubdate
+        %h1= link_to(post.title, post)
+        %date{ :pubdate => post.pubdate}= "Posted about #{time_ago_in_words(post.pubdate)} ago"
       %hr
       #post
-        %div= post.body
+        %div= markdown(truncate(post.body, length: 500, separator: ' ', omission: '...'))
       %footer
-        %div= post.notes
-        #category= post.category
+        %p
+          = "Posted #{time_ago_in_words(post.pubdate)} ago. |"
+          = "In #{post.category}"
 
   %br
 

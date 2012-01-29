@@ -13,11 +13,14 @@
     = f.label :body
     = f.text_area :body
   .field
+    = f.label :picture
+    = f.file_field  :picture
+  .field
     = f.label :category
     = f.text_field :category
   .field
     = f.label :type
-    = f.select :type, ["post", "picture", "video", "quote"]
+    = f.select :type, ["post", "picture", "video", "quote", "reply"]
   .field
     = f.label :notes
     = f.text_area :notes

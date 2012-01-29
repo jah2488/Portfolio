@@ -5,6 +5,8 @@ gem 'rails', '3.1.3'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
+gem 'redcarpet'
+gem 'mongoid-paperclip', :require => "mongoid_paperclip"
 
 gem 'mongoid_slug'
 
@@ -31,6 +33,7 @@ group :test do
   # Pretty printed test output
   gem 'turn', :require => false
 end
+gem "pry", :group => [:development, :test]
 gem "capybara", :group => [:development, :test]
 gem "devise"
 gem "haml", ">= 3.0.0"

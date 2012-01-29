@@ -1,3 +1,25 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@mixin rounded-border($amnt) {
+  -webkit-border-radius: $amnt;
+  -moz-border-radius: $amnt;
+  -o-border-radius: $amnt;
+  border-radius: $amnt;
+}
+@mixin box-shadow($x, $y, $blr, $clr) {
+  -webkit-box-shadow: $x $y $blr $clr;
+  -moz-box-shadow: $x $y $blr $clr;
+  -o-box-shadow: $x $y $blr $clr;
+  box-shadow: $x $y $blr $clr;
+}
+
+article#posts {
+  margin-top: 40px;
+  padding   : 10px;
+  background: rgba(255,255,255,1);
+  border: 1px solid #AAA;
+  @include box-shadow(-1px, 1px, 2px, #CCC);
+  @include rounded-border(4px)
+}

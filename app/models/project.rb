@@ -1,5 +1,6 @@
 class Project
   include Mongoid::Document
+  include Mongoid::Paperclip
   include Mongoid::Slug
   include Mongoid::Timestamps
   field :title,       type: String
@@ -12,7 +13,9 @@ class Project
   field :database,    type: String
   field :notes,       type: String
 
-
+  has_mongoid_attached_file :screenshot, 
+  :path   => 'assets/:attachment/:style.:extension',
+  :styles => { :small => ['150x150#', :png], :large => ['500x500>', :png]}
   slug :title
   
   def search(query)

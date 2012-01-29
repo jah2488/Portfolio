@@ -321,21 +321,20 @@ header, h1, h2, h3, h4, h5{
 }
 header h1, header h1 a {
   font-size: 44px;
-  /*float: left;*/
-  margin: 0px;
-  text-shadow: rgba(0, 0, 0, 0.5) -1px 0, rgba(0, 0, 0, 0.3) 0 -1px, rgba(255, 255, 255, 0.5) 0 1px, rgba(0, 0, 0, 0.3) -1px -2px;
-  line-height: 51px;
-}
-#nav-bar header h1, header h1 a {
-  font-size: 44px;
   float: left;
   margin: 0px;
   text-shadow: rgba(0, 0, 0, 0.5) -1px 0, rgba(0, 0, 0, 0.3) 0 -1px, rgba(255, 255, 255, 0.5) 0 1px, rgba(0, 0, 0, 0.3) -1px -2px;
   line-height: 51px;
 }
-header hgroup {  
-
+#nav-bar header h1 a {
+  font-size: 44px;
+  color: white;
+  float: left;
+  margin: 0px;
+  text-shadow: rgba(0, 0, 0, 0.5) -1px 0, rgba(0, 0, 0, 0.3) 0 -1px, rgba(255, 255, 255, 0.5) 0 1px, rgba(0, 0, 0, 0.3) -1px -2px;
+  line-height: 51px;
 }
+header hgroup {  }
 header nav          {float:left; margin: 12px 0px 0px 70px;}
   header nav ul li  {float:left;padding: 0px 120px 0px 1px;}
   header nav ul li.contact { padding: 0px 0px 0px 1px;}
@@ -526,7 +525,7 @@ footer nav {
 #social ul li a{
   height: 32px;
   width: 32px;
-  padding-top: 14px;
+  padding-top: 11.5px;
   padding-left: 32px;
 }
 p.hire {

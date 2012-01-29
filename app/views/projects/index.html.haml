@@ -8,22 +8,25 @@
   /   - @projects.each do |project|
   /     = link_to project.title, project_path(project)
 
+  %h1 A List of my most recent and favorite projects
 
   %section#project
     - @projects.each do |project|
       %article
         %header
-          #div
-            %img(src="http://placekitten.com/150/150")
           %h1= link_to project.title, project
-        %p= project.description
-        %ul
-          %li= project.language
-          %li= project.platform
-          %li= project.database
-          %li= project.deployed
-        %p= project.notes
-
+        #div
+          %img(src="http://placekitten.com/225/250")
+      %article
+        %header
+          %h1= link_to project.title, project
+        #div
+          %img(src="http://placekitten.com/225/250")
+      %article
+        %header
+          %h1= link_to project.title, project
+        #div
+          %img(src="http://placekitten.com/225/250")
   %br
 
   =  link_to 'New Project', new_project_path if current_user

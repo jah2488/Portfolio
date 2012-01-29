@@ -1,0 +1,23 @@
+#blog
+  = link_to 'Edit', edit_post_path(@post) if current_user
+  %article
+    %header 
+      %hgroup
+        #type{ :class => @post.type }.
+        %h1= link_to @post.title, @post
+        %date{ :pubdate => @post.pubdate}= "Posted about #{time_ago_in_words(@post.pubdate)} ago"
+    %br
+    %hr.clearfix
+    #share
+    #post
+      %p= markdown(@post.body)
+      %p= @post.notes if @post.notes.length > 1
+    %footer
+      %p
+        = "Posted #{time_ago_in_words(@post.pubdate)} ago. |"
+        = "In #{@post.category}"
+      #div= link_to "View More Posts", posts_path
+    %section
+      %p Comments Go Here
+
+

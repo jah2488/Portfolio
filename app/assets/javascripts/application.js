@@ -7,3 +7,4 @@
 //= require_jquery_ujs
 //= require_jquery_ui
 //= require_tree .
+

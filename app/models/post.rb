@@ -1,5 +1,6 @@
 class Post
   include Mongoid::Document
+  include Mongoid::Paperclip
   include Mongoid::Slug
   include Mongoid::Timestamps
   field :title,    type: String
@@ -10,7 +11,8 @@ class Post
   field :notes,    type: String
   
   before_save :set_date
-
+  has_mongoid_attached_file :picture, :styles => { :small => ['150x150#', :png], :large => ['500x500>', :png]}
+  slug :title
   slug :title
 
   private
