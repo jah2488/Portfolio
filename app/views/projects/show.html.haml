@@ -1,18 +1,19 @@
-%article
-  %header
-    #div
-      %img(src="http://placekitten.com/150/150")
-    %h1= link_to @project.title, @project
-  %p= @project.description
-  %ul
-    %li= @project.language
-    %li= @project.platform
-    %li= @project.database
-    %li= @project.deployed
-  %p= @project.notes
+%section#project
+  %article#show{ :class => @project.deployed }
+    %header
+      #div
+        = image_tag @project.screenshot.url(:large)
+      %h1= link_to @project.title, @project
+      %p= @project.description
+    .body
+      %h3 Misc Notes and Details
+      %p= @project.notes
+      %p= "Language: #{@project.language}"
+      %p= "Platform: #{@project.platform}"
+      %p= "Currently Deployed: #{@project.deployed}"
 
 
-= if current_user
-  = link_to 'Edit', edit_project_path(@project)
-  \|
-  = link_to 'Back', projects_path
+  = if current_user
+    = link_to 'Edit', edit_project_path(@project)
+    \|
+    = link_to 'Back', projects_path

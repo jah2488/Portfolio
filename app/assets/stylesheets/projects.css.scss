@@ -2,13 +2,31 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@mixin rounded-border($amnt) {
+  -webkit-border-radius: $amnt;
+  -moz-border-radius: $amnt;
+  -o-border-radius: $amnt;
+  border-radius: $amnt;
+}
+
 #projects{
 	padding-top:10px;
+	padding-left:80px;
 }
 
 section#project {
 		
+		a, a:visited {
+			color:#444;	
+		}
+		article.true {
+			background: #FFF;
+		}
+
 		article {
+			background: url('./graphy.png');
+			box-shadow: 0px 0px 3px #555;
+		  @include rounded-border(4px);
 			float:left;
 			width : 225px;
 			height: 325px;
@@ -18,10 +36,63 @@ section#project {
 				font-size: 28px;
 				text-shadow: 0px 0px 0px #999;
 			}
+			img {
+			  @include rounded-border(2px);
+			  margin-bottom:4px;
+			  border: 1px solid #999;
+			}
+			.language {
+				float:left;
+				color:#555;
+				font-size:12px;
+				margin-left:2px;
+				text-decoration:italic;
+			}
+			.platform {
+				float:right;
+				color:#555;
+				font-size:12px;
+				margin-right:2px;
+				font-weight:bold;
+			}
 		}
 		article:hover{
 			-webkit-transition: 2sec;
+  		-webkit-transform: rotate(2deg);
+		}
+		article:active{
+			-webkit-transition: 2sec;
   		-webkit-transform: rotate(5deg);
+		}
+		article#show{
+			height: 100%;
+			width: 90%;
+			margin-left: 32px;
+			
+			header h1 {
+				margin-left:15px;
+			}
+			header img {
+				float:right;
+				margin: 10px;
+				border:2px solid #999;
+				width:500px;
+				height:500px;
+			}	
+			header p {
+				float: left;
+				text-align: left;
+				width: 220px;
+				margin-left: 14px;
+			}
+			.body, .body p {
+				text-align:left;
+				float:none;
+			}
+		}
+		article#show:hover{
+			-webkit-transition: 2sec;
+  		-webkit-transform: rotate(0deg);
 		}
 }
 

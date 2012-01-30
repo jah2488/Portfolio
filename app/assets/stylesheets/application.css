@@ -520,12 +520,11 @@ footer nav {
 #social ul li:hover {
   opacity:.6;
   -webkit-transition: 1sec;
-  /*-webkit-transform: rotate(-10deg);*/
 }
 #social ul li a{
   height: 32px;
   width: 32px;
-  padding-top: 11.5px;
+  padding-top: 15px;
   padding-left: 32px;
 }
 p.hire {
@@ -540,18 +539,23 @@ p.hire:hover{
 }
 .twitter{
   background-image: url(./32/twitter.png);
+  background-repeat: no-repeat;
 }
 
 .facebook{
   background-image: url(./32/facebook.png);
+  background-repeat: no-repeat;
+
 }
 
 .forrst{
   background-image: url(./32/forrst.png);
+  background-repeat: no-repeat;
 }
 
 .buzz{
   background-image: url(./32/buzz.png);
+  background-repeat: no-repeat;
 }
 
 #mobile-nav {

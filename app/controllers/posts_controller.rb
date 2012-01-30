@@ -3,8 +3,7 @@ class PostsController < ApplicationController
   before_filter :authenticate_user!, :except => [:index, :show]
 
   def index
-    @posts = Post.all
-
+    @posts = Post.descending(:pubdate)
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @posts }
@@ -22,6 +21,14 @@ class PostsController < ApplicationController
     end
   end
 
+  def tagged
+    @posts = Post.any_of({ category: params[:tag] },
+                               { type: params[:tag] })
+    respond_to do |format|
+      format.html
+      format.json { render json: @projects }
+    end
+  end
   # GET /posts/new
   # GET /posts/new.json
   def new

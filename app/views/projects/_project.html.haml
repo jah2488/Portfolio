@@ -1,7 +1,8 @@
 %section#project
-  %article
+  %article{ :class => project.deployed}
     %header
-      #div
-        = image_tag @project.screenshot.url(:small)
-      %h1= link_to @project.title, @project
-      %p Rest of Project Info
+      %h1= link_to project.title, project
+    #div
+      = image_tag project.screenshot.url(:small)
+    .language= link_to "#{project.language.to_s}", tagged_project_path(project.language)
+    .platform= link_to "#{project.platform.to_s}", tagged_project_path(project.platform)

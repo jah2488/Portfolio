@@ -10,15 +10,14 @@ class Post
   field :type,     type: String
   field :notes,    type: String
   
-  before_save :set_date
   has_mongoid_attached_file :picture, :styles => { :small => ['150x150#', :png], :large => ['500x500>', :png]}
-  slug :title
+  before_save :set_date
   slug :title
 
   private
 
   def set_date
-  	self.pubdate = self.created_at
+  	self.pubdate = self.created_at || Time.now
   end
 
 end

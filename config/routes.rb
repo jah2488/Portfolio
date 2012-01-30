@@ -3,7 +3,10 @@ Portfolio::Application.routes.draw do
   get "dashboard/index"
   match "/contact" => "index#contact", as: :contact
   resources :projects
+  match 'projects/tagged/(:tag)' => "projects#tagged", as: :tagged_project, via: :get
+
   resources :posts
+  match 'posts/tagged/(:tag)' => "posts#tagged", as: :tagged_post, via: :get
 
   devise_for :users
   

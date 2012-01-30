@@ -1,0 +1,22 @@
+
+#blog
+  - @posts.each do |post|
+    %article
+      %header
+        #type{ :class => post.type }.
+        %h1= link_to(post.title, post)
+        %date{ :pubdate => post.pubdate}= "Posted about #{time_ago_in_words(post.pubdate)} ago"
+      %hr
+      #post
+        %div= markdown(truncate(post.body, length: 500, separator: ' ', omission: '...'))
+      %footer
+        %p
+          = "Posted #{time_ago_in_words(post.pubdate)} ago. |"
+          = "In #{post.category}"
+
+  %br
+
+= link_to 'New Project', new_post_path if current_user
+
+= content_for :sidebar do
+  %p Splash Sidebar content for Posts page

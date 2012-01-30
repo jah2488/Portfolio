@@ -2,7 +2,7 @@ class IndexController < ApplicationController
 
   def index
   	@post = Post.last
-  	@project = Project.last
+  	@projects = Project.descending(:start_date).limit(4)
   end
 
   def contact

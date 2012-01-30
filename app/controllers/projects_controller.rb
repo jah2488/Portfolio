@@ -24,6 +24,15 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def tagged
+    @projects = Project.any_of({ language: params[:tag] },
+                               { platform: params[:tag] })
+    respond_to do |format|
+      format.html
+      format.json { render json: @projects }
+    end
+  end
+
   # GET /projects/new
   # GET /projects/new.json
   def new
@@ -44,7 +53,7 @@ class ProjectsController < ApplicationController
   # POST /projects.json
   def create
     @project = Project.new(params[:project])
-
+    set_dates
     respond_to do |format|
       if @project.save
         format.html { redirect_to @project, notice: 'Project was successfully created.' }
@@ -60,7 +69,7 @@ class ProjectsController < ApplicationController
   # PUT /projects/1.json
   def update
     @project = Project.find_by_slug(params[:id])
-
+    set_dates
     respond_to do |format|
       if @project.update_attributes(params[:project])
         format.html { redirect_to @project, notice: 'Project was successfully updated.' }
@@ -82,5 +91,10 @@ class ProjectsController < ApplicationController
       format.html { redirect_to projects_url }
       format.json { head :ok }
     end
+  end
+
+  def set_dates
+    params[:project][:start_date] = params[:project][:"start_date(1i)"] + "-" + params[:project][:"start_date(2i)"] + "-" + params[:project][:"start_date(3i)"]
+    params[:project][:end_date] = params[:project][:"end_date(1i)"] + "-" + params[:project][:"end_date(2i)"] + "-" + params[:project][:"end_date(3i)"]
   end
 end

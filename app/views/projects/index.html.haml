@@ -12,11 +12,13 @@
 
   %section#project
     - @projects.each do |project|
-      %article
+      %article{ :class => project.deployed}
         %header
-          %h1= link_to project.title, project
+          %h1= link_to project.title.titleize, project
         #div
-          %img(src="http://placekitten.com/225/250")
+          = image_tag project.screenshot.url(:small) || image_tag("http://placekitten.com/225/250")
+        .language= link_to "#{project.language.to_s}", tagged_project_path(project.language)
+        .platform= link_to "#{project.platform.to_s}", tagged_project_path(project.platform)
       %article
         %header
           %h1= link_to project.title, project
@@ -32,4 +34,5 @@
   =  link_to 'New Project', new_project_path if current_user
 
 = content_for :sidebar do
-  %p Splash Sidebar content for Projects page
+  %p Exciting Sidebar content for Projects page
+  %hr

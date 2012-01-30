@@ -10,15 +10,17 @@ class Project
   field :start_date,  type: Date
   field :end_date,    type: Date
   field :platform,    type: String
-  field :database,    type: String
   field :notes,       type: String
 
+  validates_presence_of :language, :title, :platform, :start_date
+
   has_mongoid_attached_file :screenshot, 
-  :path   => 'assets/:attachment/:style.:extension',
-  :styles => { :small => ['150x150#', :png], :large => ['500x500>', :png]}
+  :styles => { :thumb => ['100x100#', :png], :small => ['225x250#', :png], :large => ['500x500>', :png]}
   slug :title
-  
+
+
   def search(query)
     find(query)
   end
+
 end
