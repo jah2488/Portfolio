@@ -32,8 +32,15 @@
 	       for optimal performance, create your own custom Modernizr build: www.modernizr.com/download/ -->
 	  <script src="js/libs/modernizr-2.0.6.min.js"></script>
 	</head>
-	<body onload="prettyPrint()"
->
+	<body onload="prettyPrint()">
+	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=136118426463877";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 	<div id="wrapper">
 		<header id="nav-bar" class="">
 			<hgroup class="">

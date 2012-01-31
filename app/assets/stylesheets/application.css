@@ -406,6 +406,15 @@ footer nav {
   font-size:10px;
 }
 
+section#comments {
+  width: 100%;
+}
+
+section#comments hr, section#comments div.fb-comments {
+  text-align:center;
+  margin:0 auto;
+  width:100%;
+}
 
 /** CODE SHARED BETWEEN INDEX PAGE AND ALSO POSTS PAGE AND PROJECTS PAGE **/
 /* line 5, /Users/Kate/Documents/justins-files/portfolio/app/assets/stylesheets/index.css.scss */

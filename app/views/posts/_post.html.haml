@@ -17,7 +17,8 @@
         = "Posted #{time_ago_in_words(@post.pubdate)} ago. | In"
         =  link_to @post.category, tagged_post_path(@post.category)
       #div= link_to "View More Posts", posts_path
-    %section
-      %p Comments Go Here
+    %section#comments
+      %hr
+      .fb-comments{ :"data-href" => "#{request.fullpath}", :"data-num-posts" => "3", :"data-width" => "470"}
 
 
