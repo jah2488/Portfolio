@@ -19,6 +19,6 @@
       #div= link_to "View More Posts", posts_path
     %section#comments
       %hr
-      .fb-comments{ :"data-href" => "#{request.fullpath}", :"data-num-posts" => "3", :"data-width" => "470"}
+      .fb-comments{ :"data-href" => "#{url_for(@post)}", :"data-num-posts" => "3", :"data-width" => "470"}
 
 
