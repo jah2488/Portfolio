@@ -104,7 +104,11 @@
 					<%= yield :sidebar %>
 				</div>
 			</div>
-		<footer class="clearfix">
+		<div id="flash_error">
+		Site Under Construction. Ignore the oddly placed CSS.
+		</div>
+
+		<footer class="clearfix" style="display:none;">
 			<nav>
 				<ul class="clearfix">
 					<li class="clearfix"> <%= link_to "Blog", posts_path %> </li>

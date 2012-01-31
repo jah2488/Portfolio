@@ -19,16 +19,6 @@
           = image_tag project.screenshot.url(:small) || image_tag("http://placekitten.com/225/250")
         .language= link_to "#{project.language.to_s}", tagged_project_path(project.language)
         .platform= link_to "#{project.platform.to_s}", tagged_project_path(project.platform)
-      %article
-        %header
-          %h1= link_to project.title, project
-        #div
-          %img(src="http://placekitten.com/225/250")
-      %article
-        %header
-          %h1= link_to project.title, project
-        #div
-          %img(src="http://placekitten.com/225/250")
   %br
 
   =  link_to 'New Project', new_project_path if current_user
