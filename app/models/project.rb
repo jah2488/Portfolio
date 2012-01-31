@@ -4,6 +4,7 @@ class Project
   include Mongoid::Slug
   include Mongoid::Timestamps
   field :title,       type: String
+  field :url,         type: String
   field :description, type: String
   field :language,    type: String
   field :deployed,    type: Boolean
@@ -15,7 +16,7 @@ class Project
   validates_presence_of :language, :title, :platform, :start_date
 
   has_mongoid_attached_file :screenshot, 
-  :styles => { :thumb => ['100x100#', :png], :small => ['225x250#', :png], :large => ['500x500>', :png]}
+  :styles => { :thumb => ['100x100#', :png], :small => ['225x250#', :png], :large => ['500x500^', :png]}
   slug :title
 
 
