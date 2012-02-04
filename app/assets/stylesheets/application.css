@@ -431,9 +431,10 @@ section#comments hr, section#comments div.fb-comments {
 }
 /* line 16, /Users/Kate/Documents/justins-files/portfolio/app/assets/stylesheets/index.css.scss */
 #blog article header {
-  padding: 5px 5px 5px 0px;
+  padding: 5px 10px 0px 0px;
   height: 70px;
   display: block;
+  margin-bottom: 20px;
 }
 #blog article header hgroup {
   display: block;
@@ -446,8 +447,8 @@ section#comments hr, section#comments div.fb-comments {
   font-weight:bold;
   color: #555;
   text-align: right;
-  margin-top: 8px;
-  margin-left: 10px;
+  margin-top: 1px;
+  margin-left: 5px;
   float: left;
   text-shadow:none;
 }
@@ -462,13 +463,19 @@ section#comments hr, section#comments div.fb-comments {
 #blog article header #type {
   float: left;
   background: #B9381D;
-  width: 64px;
-  height: 64px;
+  width: 50px;
+  height: 50px;
   border-radius: 5px 5px 5px 5px;
   box-shadow: -2px 2px 4px #555 inset;
   margin-top: 5px;
-  margin-left: 9px;
+  margin-left: 10px;
 }
+#blog article header #type.post { background: #B9381D url('./icons/glyphicons_039_notes.png') no-repeat scroll center center;}
+#blog article header #type .photo{ background: #B9381D url('./icons/glyphicons_159_picture.png') no-repeat scroll center center;}
+#blog article header #type .video{ background: #B9381D url('./icons/glyphicons_008_film.png') no-repeat scroll center center;}
+#blog article header #type .quote{ background: #B9381D url('./icons/glyphicons_088_adress_book.png') no-repeat scroll center center;}
+#blog article header #type .reply{ background: #B9381D url('./icons/glyphicons_080_retweet.png') no-repeat scroll center center;}
+
 /* line 53, /Users/Kate/Documents/justins-files/portfolio/app/assets/stylesheets/index.css.scss */
 #blog article hr {
   width: 70%;
@@ -507,6 +514,13 @@ section#comments hr, section#comments div.fb-comments {
   margin: 15px;
   width: 150px;
   height: 150px;
+}
+span.category a{
+  color:#999;
+}
+span.category a:hover{
+  color:#999;
+  text-decoration:underline;
 }
 #project p{
   float: right;
@@ -548,22 +562,29 @@ p.hire:hover{
 }
 .twitter{
   background-image: url(./32/twitter.png);
+  /*background-image: url(./icons/glyphicons_322_twitter.png);*/
+  /*background-color: rgba(56,166,206,1);*/
   background-repeat: no-repeat;
 }
 
 .facebook{
   background-image: url(./32/facebook.png);
+  /*background-image: url(./icons/glyphicons_322_twitter.png);*/
+  /*background-color: rgba(42,67,136,1);*/
   background-repeat: no-repeat;
 
 }
 
 .forrst{
   background-image: url(./32/forrst.png);
+  /*background-image: url(./icons/glyphicons_322_twitter.png);*/
+  /*background-color: rgba(27,52,16,1);*/
   background-repeat: no-repeat;
 }
 
-.buzz{
-  background-image: url(./32/buzz.png);
+.github{
+  /*background-image: url(./icons/glyphicons_341_github.png);*/
+  /*background-color: rgba(230,230,230,1);*/
   background-repeat: no-repeat;
 }
 

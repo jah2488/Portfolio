@@ -5,7 +5,7 @@
         = image_tag @project.screenshot.url(:large)
       %h1= link_to @project.title, @project
       %p= link_to @project.url, @project.url
-      %p= @project.description
+      %p= markdown( @project.description )
     .body
       %h3 Misc Notes and Details
       %p= @project.notes

@@ -1,24 +1,16 @@
-%h1 A List of my projects with tag ____
+%h1 A List of my projects tagged #{params[:tag] if params[:tag]}
 
 %section#project
   - @projects.each do |project|
     %article{ :class => project.deployed}
       %header
-        %h1= link_to project.title, project
+        %h1= link_to project.title.titleize, project
       #div
-        %img(src="http://placekitten.com/225/250")
-      .language= project.language
-      .platform= project.platform
-    %article
-      %header
-        %h1= link_to project.title, project
-      #div
-        %img(src="http://placekitten.com/225/250")
-    %article
-      %header
-        %h1= link_to project.title, project
-      #div
-        %img(src="http://placekitten.com/225/250")
+        = image_tag project.screenshot.url(:small) || image_tag("http://placekitten.com/225/250")
+      .language= link_to "#{project.language.to_s}", tagged_project_path(project.language)
+      .platform= link_to "#{project.platform.to_s}", tagged_project_path(project.platform)
+  %br
+
 %br
 
 =  link_to 'New Project', new_project_path if current_user

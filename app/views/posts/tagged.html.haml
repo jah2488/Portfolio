@@ -11,8 +11,9 @@
         %div= markdown(truncate(post.body, length: 500, separator: ' ', omission: '...'))
       %footer
         %p
-          = "Posted #{time_ago_in_words(post.pubdate)} ago. |"
-          = "In #{post.category}"
+          = "Posted #{time_ago_in_words(@post.pubdate)} ago. | In"
+          %span{ :class=> "category"}=  link_to @post.category, tagged_post_path(@post.category)
+          = link_to "View More Posts", posts_path
 
   %br
 
