@@ -55,7 +55,9 @@ class ProjectsController < ApplicationController
   # POST /projects.json
   def create
     @project = Project.new(params[:project])
-    set_dates
+    @project.start_date = set_start_date
+    @project.end_date   = set_end_date
+    binding.pry if Rails.env.development?
     respond_to do |format|
       if @project.save
         format.html { redirect_to @project, notice: 'Project was successfully created.' }
@@ -95,8 +97,10 @@ class ProjectsController < ApplicationController
     end
   end
 
-  def set_dates
+  def set_start_date
     params[:project][:start_date] = params[:project][:"start_date(1i)"] + "-" + params[:project][:"start_date(2i)"] + "-" + params[:project][:"start_date(3i)"]
-    params[:project][:end_date] = params[:project][:"end_date(1i)"] + "-" + params[:project][:"end_date(2i)"] + "-" + params[:project][:"end_date(3i)"]
+  end
+  def set_end_date
+      params[:project][:end_date] = params[:project][:"end_date(1i)"] + "-" + params[:project][:"end_date(2i)"] + "-" + params[:project][:"end_date(3i)"]
   end
 end
