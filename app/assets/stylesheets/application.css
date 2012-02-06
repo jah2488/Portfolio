@@ -416,6 +416,15 @@ section#comments hr, section#comments div.fb-comments {
   width:100%;
 }
 
+#share{
+  position: relative;
+  top: 0px;
+  left: 20px;
+}
+#share .tw {
+  float:left;  
+}
+
 /** CODE SHARED BETWEEN INDEX PAGE AND ALSO POSTS PAGE AND PROJECTS PAGE **/
 /* line 5, /Users/Kate/Documents/justins-files/portfolio/app/assets/stylesheets/index.css.scss */
 #blog {

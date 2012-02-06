@@ -9,6 +9,7 @@
     / %br
     / %hr.clearfix
     #share
+      = render partial: 'layouts/share'
     #post
       %p= markdown(@post.body)
       %p= @post.notes if @post.notes.length > 1
@@ -21,4 +22,5 @@
       %hr
       .fb-comments{ :"data-href" => "http://justinherrick.com#{url_for(@post)}", :"data-num-posts" => "3", :"data-width" => "470"}
 
-
+-content_for :title, @post.title 
+-content_for :keywords, @post.category
