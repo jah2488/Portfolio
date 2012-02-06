@@ -429,6 +429,15 @@ section#comments hr, section#comments div.fb-comments {
   box-shadow: 0px 0px 4px #555;
   border-radius: 5px;
 }
+#blog article #post a {
+  color: #777;
+}
+#blog article #post a:hover,#blog article #post a:focus {
+  text-decoration: underline;
+}
+#blog article #post a:active{
+  color: #333;
+}
 /* line 16, /Users/Kate/Documents/justins-files/portfolio/app/assets/stylesheets/index.css.scss */
 #blog article header {
   padding: 5px 10px 0px 0px;
