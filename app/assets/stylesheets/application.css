@@ -346,32 +346,28 @@ header nav          {float:left; margin: 12px 0px 0px 70px;}
   }
 
 #content-wrapper{
+  margin: 0 auto;
+}
+#main{
+/*  float: left;
+  width: 98%;
+  padding-top: 10px;
+  overflow: hidden;*/
   width: 65%;
   display: block;
   clear: both;
   overflow: auto;
   position: relative;
   padding: 48px 0px;
-  /*background: white;*/
   margin-left: 20px;
-/*  box-shadow: 0px 0px 15px #AAA inset;*/
-}
-#main{
-  float: left;
-  width: 100%;
-  padding-top: 10px;
-}
-#sidebar{
-  width:24%;
-  padding:10px;
-  height: 100%;
 }
 #content {
-/*	float:left;
-  width: 95%;*/
   margin: 0 auto;
 }
 #sidebar {
+  width:20%;
+  padding:10px;
+  height: 100%;
   position: fixed;
   top: 5%;
   right: 10px;
@@ -659,19 +655,43 @@ License: Creative Commons CC Zero Declaration. No Rights Reserved.
  #wrapper {
    width:100%;
  }
+ header#nav-bar{
+  height:40px;
+ }
+ header#nav-bar hgroup h1 {
+   text-align: center;
+   /*padding-left:25px;*/
+ }
  header#nav-bar hgroup h1 a {
    font-size: 32px;
+   line-height: 38px;
+   font-weight: bold;
+   font-family: 'helvetica';
  }
  #mobile-nav{
    display:inline !important;
    width: 100%;
    float:left;
  }
- #mobile-nav nav ul li a {
-  color:#333;
+ #mobile-nav nav ul li {
+   margin: 0 5px 0px 15px;
  }
- section#blog article header hgroup div#type {
-   display: none;
+ #mobile-nav nav ul li:first {
+   margin-left: 5px;
+ }
+ #mobile-nav nav ul li a {
+   color:#333;
+   font-size:18px;
+ }
+ div#main {
+   padding-top:0px;
+   width: 100%;
+ }
+ #content-wrapper {
+   width: 100%;
+ }
+ section#content {
+   width: 100%;
  }
  section#blog article header hgroup h1 a {
    font-size: 22px;
@@ -683,17 +703,27 @@ License: Creative Commons CC Zero Declaration. No Rights Reserved.
    clear:both;
    line-height:20px;
  }
- #blog {
+ section#blog article header {
+   clear: both;
+   margin-bottom: 10px;
+ }
+ section#blog {
    width: 100%;
    margin:1px;
+   overflow:hidden;
+ }
+ section#blog article #share {
+   clear:both;
+   margin: 10px 0;
  }
  #content-wrapper{
-   width:100%;
+   width:99%;
    padding: 0px 0px;
    margin:1px;
+   overflow:hidden;
  }
  #main {
-   width:100%;
+   width:99%;
    margin: 1px;
  }
  #sidebar {

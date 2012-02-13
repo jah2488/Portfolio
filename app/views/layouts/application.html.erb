@@ -4,10 +4,9 @@
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"> <!--<![endif]-->
 	<head>
 	  <meta charset="utf-8">
-
 	  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
 	       More info: h5bp.com/b/378 -->
 	  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -74,42 +73,42 @@
 					<%= yield %>
 				</section>
 			</div>
-		</div>
-		<div id="sidebar" role="sidebar">
-				<div id="icon">
-					<div class="border">
-						<img src="/assets/me.jpg" />
+			<div id="sidebar" role="sidebar">
+					<div id="icon">
+						<div class="border">
+							<img src="/assets/me.jpg" />
+						</div>
 					</div>
-				</div>
-				<div id="about-me">
-				<div id="social">
-					<ul>
-						<li class="1twitter">
-							<%= link_to "", "http://twitter.com/jah2488",  :class => "twitter" %>
-						</li>
-						<li class="1forrst">
-							<%= link_to "", "http://forrst.me/jah2488",    :class => "forrst" %>
-						</li>
-						<li class="1facebook">
-							<%= link_to "", "http://facebook.com/jah2488", :class => "facebook" %>
-						</li>
-						<li class="1buzz">
-							<%= link_to "", "http://github.com/jah2488",   :class => "github" %>
-						</li>
-					</ul>
-				</div>
-					<p> My name is Justin and I make web apps,
-					 I provide app and startup consultation,
-					 I like to make things that work.
-					 I like creativity, novelty, and believe
-					 that less is more.</p>
-					<p class="hire">I'm available for hire!<br/>
-					<%= link_to "Contact Me if you're Interested", contact_path %></p>
-				</div>
-				<div id="sidebar-content" >
-					<%= yield :sidebar %>
-				</div>
+					<div id="about-me">
+						<div id="social">
+							<ul>
+								<li class="1twitter">
+									<%= link_to "", "http://twitter.com/jah2488",  :class => "twitter" %>
+								</li>
+								<li class="1forrst">
+									<%= link_to "", "http://forrst.me/jah2488",    :class => "forrst" %>
+								</li>
+								<li class="1facebook">
+									<%= link_to "", "http://facebook.com/jah2488", :class => "facebook" %>
+								</li>
+								<li class="1buzz">
+									<%= link_to "", "http://github.com/jah2488",   :class => "github" %>
+								</li>
+							</ul>
+						</div>
+						<p> My name is Justin and I make web apps,
+						 I provide app and startup consultation,
+						 I like to make things that work.
+						 I like creativity, novelty, and believe
+						 that less is more.</p>
+						<p class="hire">I'm available for hire!<br/>
+						<%= link_to "Contact Me if you're Interested", contact_path %></p>
+					</div>
+					<div id="sidebar-content" >
+						<%= yield :sidebar %>
+					</div>
 			</div>
+		</div>
 		<div id="flash_error">
 		Site Under Construction. Ignore the oddly placed CSS.
 		</div>

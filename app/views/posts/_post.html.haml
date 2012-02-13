@@ -8,8 +8,6 @@
         %date{ :pubdate => @post.pubdate}= "Posted about #{time_ago_in_words(@post.pubdate)} ago"
     / %br
     / %hr.clearfix
-    #share
-      = render partial: 'layouts/share'
     #post
       %p= markdown(@post.body)
       %p= @post.notes if @post.notes.length > 1
@@ -18,6 +16,8 @@
         = "Posted #{time_ago_in_words(@post.pubdate)} ago. | In"
         %span{ :class=> "category"}=  link_to @post.category, tagged_post_path(@post.category)
         = link_to "View More Posts", posts_path
+      #share
+        = render partial: 'layouts/share'
     %section#comments
       %hr
       .fb-comments{ :"data-href" => "http://justinherrick.com#{url_for(@post)}", :"data-num-posts" => "3", :"data-width" => "470"}
