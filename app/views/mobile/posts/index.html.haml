@@ -1,0 +1,13 @@
+
+#blog
+  - @posts.each do |post|
+    %article
+      %header
+        #type{ :class => post.type }
+          %h1= link_to(post.title, post)
+      %footer
+        %p
+          = "Posted #{time_ago_in_words(post.pubdate)} ago. |"
+          = "In #{post.category}"
+
+  %br

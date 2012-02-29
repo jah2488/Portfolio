@@ -356,7 +356,7 @@ header nav          {float:left; margin: 12px 0px 0px 70px;}
   width: 65%;
   display: block;
   clear: both;
-  overflow: auto;
+  overflow: visible;
   position: relative;
   padding: 48px 0px;
   margin-left: 20px;
@@ -693,6 +693,13 @@ License: Creative Commons CC Zero Declaration. No Rights Reserved.
  section#content {
    width: 100%;
  }
+
+ div#blog article div#post p img {
+   height: auto;
+   width: 100%;
+   margin: 5px 0px 5px 0px;
+ }
+
  section#blog article header hgroup h1 a {
    font-size: 22px;
    display: block;
@@ -728,6 +735,12 @@ License: Creative Commons CC Zero Declaration. No Rights Reserved.
  }
  #sidebar {
    display:none;
+ }
+
+ section#project {
+  margin: 0 auto;
+  width: 250px;
+  overflow: visible;
  }
 }
 

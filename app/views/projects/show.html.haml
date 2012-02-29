@@ -12,7 +12,8 @@
       %p= "Language: #{@project.language}"
       %p= "Platform: #{@project.platform}"
       %p= "Currently Deployed: #{@project.deployed}"
-
+    .language= @project.language
+    .platform= @project.platform
 
   = if current_user
     = link_to 'Edit', edit_project_path(@project)

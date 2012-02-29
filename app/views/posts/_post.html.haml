@@ -21,6 +21,7 @@
     %section#comments
       %hr
       .fb-comments{ :"data-href" => "http://justinherrick.com#{url_for(@post)}", :"data-num-posts" => "3", :"data-width" => "470"}
-
--content_for :title, @post.title 
--content_for :keywords, @post.category
+- unless controller_name == 'index'
+  -content_for :title, @post.title
+  -content_for :description, truncate(@post.body, length: 100)
+  -content_for :keywords, @post.category
