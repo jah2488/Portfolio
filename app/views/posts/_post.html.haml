@@ -1,27 +1,24 @@
 #blog
-  = link_to 'Edit', edit_post_path(@post) if current_user
+  = link_to 'Edit', edit_post_path(post) if current_user
   %article
-    %header 
+    %header
       %hgroup
-        #type{ :class => @post.type }
-        %h1= link_to @post.title, @post
-        %date{ :pubdate => @post.pubdate}= "Posted about #{time_ago_in_words(@post.pubdate)} ago"
-    / %br
-    / %hr.clearfix
+        #type{ :class => post.type }
+        %h1= link_to post.title, post
+        %date{ :pubdate => post.pubdate }= "Posted about #{time_ago_in_words(post.pubdate)} ago"
     #post
-      %p= markdown(@post.body)
-      %p= @post.notes if @post.notes.length > 1
+      %p= markdown(post.body)
     %footer
       %p
-        = "Posted #{time_ago_in_words(@post.pubdate)} ago. | In"
-        %span{ :class=> "category"}=  link_to @post.category, tagged_post_path(@post.category)
+        = "Posted #{time_ago_in_words(post.pubdate)} ago. | In"
+        %span{ :class=> "category" }=  link_to post.category, tagged_post_path(post.category)
         = link_to "View More Posts", posts_path
       #share
         = render partial: 'layouts/share'
     %section#comments
       %hr
-      .fb-comments{ :"data-href" => "http://justinherrick.com#{url_for(@post)}", :"data-num-posts" => "3", :"data-width" => "470"}
+      .fb-comments{ :"data-href" => "http://justinherrick.com#{url_for(post)}", :"data-num-posts" => "3", :"data-width" => "470"}
 - unless controller_name == 'index'
-  -content_for :title, @post.title
-  -content_for :description, truncate(@post.body, length: 100)
-  -content_for :keywords, @post.category
+  -content_for :title, post.title
+  -content_for :description, truncate(post.body, length: 100)
+  -content_for :keywords, post.category

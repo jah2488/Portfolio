@@ -9,7 +9,10 @@ class Post
   field :pubdate,  type: Date
   field :type,     type: String
   field :notes,    type: String
-  
+
+  validates :title, presence: true, uniqueness: true
+  validates :body, :type, presence: true
+
   has_mongoid_attached_file :picture, :styles => { :small => ['150x150#', :png], :large => ['500x500>', :png]}
   before_save :set_date
   slug :title
@@ -17,7 +20,7 @@ class Post
   private
 
   def set_date
-  	self.pubdate = self.created_at || Time.now
+    self.pubdate = self.created_at || Time.now
   end
 
 end

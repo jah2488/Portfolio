@@ -3,15 +3,21 @@
 #stats
   %h1 Stats
   #posts
-    %h3= pluralize(@posts.count, "post")
-    #div= link_to "New Post", new_post_path
-    %h4 Edit Posts
+    %div
+      %span.title= "You have #{pluralize(@posts.count, "Post")}"
+      = link_to "Create New Post", new_post_path, :class => "create right btn clearfix"
+      %hr.clearfix
     - @posts.each do |post|
-      #div= link_to post.title, edit_post_path(post)
+      .post.row-item
+        = link_to post.title, edit_post_path(post)
+        = link_to "Delete", post_path(post), :message => "Delete the post?", :method => :delete, :class => "delete right btn"
   %hr
   #projects
-    %h3= pluralize(@projects.count, "project")
-    #div= link_to "New Post", new_project_path
-    %h4 Edit Posts
+    %div
+      %span.title= "You have #{pluralize(@projects.count, "Project")}"
+      = link_to "Create New Project", new_project_path, :class => "create right btn clearfix"
+      %hr.clearfix
     - @projects.each do |project|
-      #div= link_to project.title, edit_project_path(project)
+      .project.row-item
+        = link_to project.title, edit_project_path(project)
+        = link_to "Delete", project_path(project), :message => "Delete the post?", :method => :delete, :class => "delete right btn"

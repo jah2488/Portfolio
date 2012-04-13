@@ -3,4 +3,5 @@
   = render @projects
 
 = content_for :sidebar do
-  %p Exciting Placeholder Sidebar for index
+  = link_to "ATOM Feed", "", class: "feed", id: "atom"
+  = link_to "RSS  Feed", "", class: "feed", id: "rss"

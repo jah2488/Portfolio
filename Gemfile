@@ -7,7 +7,6 @@ gem 'rails', '3.1.3'
 
 gem 'redcarpet'
 gem 'mongoid-paperclip', :require => "mongoid_paperclip"
-
 gem 'mongoid_slug'
 
 # Gems used only for assets and not required
@@ -18,27 +17,32 @@ group :assets do
   gem 'uglifier'
 end
 
-
-
-# Use unicorn as the web server
-# gem 'unicorn'
-
 # Deploy with Capistrano
 gem 'capistrano'
 
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
-
 group :test do
-  # Pretty printed test output
   gem 'turn', :require => false
+  gem 'cucumber-rails'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'database_cleaner'
 end
-gem "pry", :group => [:development, :test]
-gem "capybara", :group => [:development, :test]
+
+group :development, :test do
+  gem "pry"
+  gem "rb-fsevent"
+  gem "guard-rspec"
+  gem "guard-livereload"
+  gem "rspec-rails"
+  gem "fabrication"
+  gem "shoulda", "~> 2.0.0"
+  gem "shoulda-matchers"
+  gem "mongoid-rspec"
+  gem "capybara"
+end
 gem "devise"
 gem "haml", ">= 3.0.0"
 gem "haml-rails"
 gem "jquery-rails"
 gem "mongoid", "~> 2.4"
 gem "bson_ext", "~> 1.5"
-gem "rspec-rails", ">= 2.0.1", :group => [:development, :test]

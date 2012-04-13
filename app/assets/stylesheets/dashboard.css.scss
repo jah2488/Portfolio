@@ -1,3 +1,69 @@
 // Place all the styles related to the dashboard controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#stats {
+
+  .right { float:right; }
+  .left  { float:left;  }
+  a      { color:#444;  }
+
+  a:hover {
+    text-shadow:1px 1px #999;
+  }
+
+  a.btn { color:white; border-radius:5px; }
+
+  a.delete:hover { box-shadow:inset 1px 1px 3px #555; }
+  a.delete {
+    background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0.05, #C81E23), color-stop(0.95, #FF1500));
+    padding:1px 10px;
+  }
+  a.create:hover { box-shadow:inset 1px 1px 7px #555; }
+  a.create {
+    background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0.05, #178414), color-stop(0.95, #00ff15));
+    padding:10px 10px;
+  }
+  a.edit {
+   background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0.05, rgba(170, 42, 39, 1)), color-stop(0.95, #C81E23));
+   padding: 2px 10px;
+   margin: 0 auto;
+   width: 50%;
+  }
+  span.title {
+    font-size:28px;
+  }
+
+  .row-item {
+    margin:8px;
+    padding:7px;
+    padding-left: 10px;
+    border-radius:5px;
+    background:#AAA;//rgba(170, 42, 39, .8);
+    box-shadow:1px 1px 3px #999;
+  }
+  .row-item:hover {
+    box-shadow:1px 1px 3px #777;
+  }
+
+  #posts {
+
+    .post {
+    }
+    .post:hover {
+    }
+
+
+  }
+
+  #projects {
+    padding:5px !important;
+
+    .project {
+    }
+  }
+
+
+}
+

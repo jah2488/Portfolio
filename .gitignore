@@ -5,3 +5,5 @@ tmp/
 .sass-cache/
 config/deploy.rb
 pas.txt
+rails_best_practices_output.html
+*.swp

@@ -373,6 +373,12 @@ header nav          {float:left; margin: 12px 0px 0px 70px;}
   right: 10px;
   margin-right: 10px;
 }
+#sidebar #about-me a {
+  color:rgba(170, 42, 39, 1)
+}
+#sidebar a:visited {
+  color:rgba(170, 42, 39, .6)
+}
 .border {
   border-radius: 6px;
   border: 5px solid #C81E23;
@@ -573,6 +579,9 @@ p.hire {
 }
 p.hire:hover{
   background-color:rgba(170,42,39,.8);
+}
+#sidebar #about-me p.hire a {
+  color:white;
 }
 .twitter{
   background-image: url(./32/twitter.png);
