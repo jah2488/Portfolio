@@ -11,7 +11,6 @@
       .post.row-item
         = link_to post.title, edit_post_path(post)
         = link_to "Delete", {:action => :destroy, :controller => :posts, :id => post }, :confirm => "Delete the post?", :method => :delete, :class => "delete right btn"
-        = link_to "Delete", post_path(post), :confirm => "Are you sure?", :method=>:delete
 
   %hr
   #projects
