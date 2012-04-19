@@ -4,14 +4,13 @@ Portfolio::Application.routes.draw do
   match "/contact" => "index#contact", as: :contact
   resources :projects
   match 'projects/tagged/(:tag)' => "projects#tagged", as: :tagged_project, via: :get
-
-  resources :posts
+  resources :posts do
+    get 'feed', on: :collection, format: 'rss'
+  end
   match 'posts/tagged/(:tag)' => "posts#tagged", as: :tagged_post, via: :get
 
   devise_for :users
-  
   match '/dashboard' => "dashboard#index", as: :user_root
-    
   root to: "index#index"
 
   # The priority is based upon order of creation:

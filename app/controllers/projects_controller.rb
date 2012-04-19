@@ -1,8 +1,6 @@
 class ProjectsController < ApplicationController
   before_filter :authenticate_user!, :except => [:index, :show]
 
-  # GET /projects
-  # GET /projects.json
   def index
     if params[:query]
       @projects = Project.search(params[:query])
@@ -15,8 +13,6 @@ class ProjectsController < ApplicationController
     end
   end
 
-  # GET /projects/1
-  # GET /projects/1.json
   def show
     @project = Project.find_by_slug(params[:id])
 
@@ -35,8 +31,6 @@ class ProjectsController < ApplicationController
     end
   end
 
-  # GET /projects/new
-  # GET /projects/new.json
   def new
     @project = Project.new
 
@@ -51,13 +45,10 @@ class ProjectsController < ApplicationController
     @project = Project.find_by_slug(params[:id])
   end
 
-  # POST /projects
-  # POST /projects.json
   def create
     @project = Project.new(params[:project])
     @project.start_date = set_start_date
     @project.end_date   = set_end_date
-    binding.pry if Rails.env.development?
     respond_to do |format|
       if @project.save
         format.html { redirect_to @project, notice: 'Project was successfully created.' }
@@ -69,8 +60,6 @@ class ProjectsController < ApplicationController
     end
   end
 
-  # PUT /projects/1
-  # PUT /projects/1.json
   def update
     @project = Project.find_by_slug(params[:id])
     respond_to do |format|
@@ -84,8 +73,6 @@ class ProjectsController < ApplicationController
     end
   end
 
-  # DELETE /projects/1
-  # DELETE /projects/1.json
   def destroy
     @project = Project.find_by_slug(params[:id])
     @project.destroy

@@ -27,8 +27,7 @@ class PostsController < ApplicationController
       format.json { render json: @projects }
     end
   end
-  # GET /posts/new
-  # GET /posts/new.json
+
   def new
     @post = Post.new
 
@@ -38,13 +37,10 @@ class PostsController < ApplicationController
     end
   end
 
-  # GET /posts/1/edit
   def edit
     @post = Post.find_by_slug(params[:id])
   end
 
-  # POST /posts
-  # POST /posts.json
   def create
     @post = Post.new(params[:post])
 
@@ -59,8 +55,6 @@ class PostsController < ApplicationController
     end
   end
 
-  # PUT /posts/1
-  # PUT /posts/1.json
   def update
     @post = Post.find_by_slug(params[:id])
 
@@ -75,15 +69,21 @@ class PostsController < ApplicationController
     end
   end
 
-  # DELETE /posts/1
-  # DELETE /posts/1.json
   def destroy
     @post = Post.find_by_slug(params[:id])
     @post.destroy
 
     respond_to do |format|
-      format.html { redirect_to posts_url }
+      format.html { redirect_to :back }
       format.json { head :ok }
+    end
+  end
+
+  def feed
+    @posts = Post.all.order("posted_at DESC").limit(20)
+    respond_to do |format|
+      format.html
+      format.rss { render :layout => false } #index.rss.builder
     end
   end
 end

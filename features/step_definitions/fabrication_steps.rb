@@ -1,4 +1,4 @@
-World(FabricationMethods)
+#World(FabricationMethods)
 
 def with_ivars(fabricator)
   @they = yield fabricator

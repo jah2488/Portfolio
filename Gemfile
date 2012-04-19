@@ -32,6 +32,7 @@ group :development, :test do
   gem "pry"
   gem "rb-fsevent"
   gem "guard-rspec"
+  gem "guard-cucumber"
   gem "guard-livereload"
   gem "rspec-rails"
   gem "fabrication"

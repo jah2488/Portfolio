@@ -3,5 +3,4 @@
   = render @projects
 
 = content_for :sidebar do
-  = link_to "ATOM Feed", "", class: "feed", id: "atom"
-  = link_to "RSS  Feed", "", class: "feed", id: "rss"
+  = link_to "rss", feed_posts_path, class: "feed", id: "rss"

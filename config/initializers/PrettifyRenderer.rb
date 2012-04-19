@@ -1,7 +1,7 @@
 class PrettifyRenderer < Redcarpet::Render::HTML
   attr_accessor :pre_list
 
-  def initialize  
+  def initialize
     @pre_list = []
     super
   end
