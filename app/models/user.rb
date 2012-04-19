@@ -13,4 +13,14 @@ class User
   #
   ## Rememberable
   field :remember_created_at, :type => Time
+
+  validate :max_user_accounts, on: :create
+
+
+  def max_user_accounts
+    if User.count > 0
+      errors.add(:name, "Max amount of users taken")
+    end
+  end
+
 end
