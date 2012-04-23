@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-  before_filter :authenticate_user!, :except => [:index, :show]
+  before_filter :authenticate_user!, :except => [:index, :show, :feed]
 
   def index
     @posts = Post.descending(:pubdate)
@@ -81,9 +81,10 @@ class PostsController < ApplicationController
 
   def feed
     @posts = Post.all.order("posted_at DESC").limit(20)
+    @updated = @posts.first.updated_at unless @posts.empty?
     respond_to do |format|
-      format.html
-      format.rss { render :layout => false } #index.rss.builder
+      format.atom { render layout: false}
+      format.rss  { redirect_to feed_path(format: :atom), status: :moved_permanently}
     end
   end
 end

@@ -2,11 +2,10 @@ Portfolio::Application.routes.draw do
 
   get "dashboard/index"
   match "/contact" => "index#contact", as: :contact
+  match "/feed" => "posts#feed", as: :feed, defaults: { format: :rss }
   resources :projects
   match 'projects/tagged/(:tag)' => "projects#tagged", as: :tagged_project, via: :get
-  resources :posts do
-    get 'feed', on: :collection, format: 'rss'
-  end
+  resources :posts
   match 'posts/tagged/(:tag)' => "posts#tagged", as: :tagged_post, via: :get
 
   devise_for :users
