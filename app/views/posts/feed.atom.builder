@@ -8,7 +8,7 @@ atom_feed do |feed|
     feed.entry( post ) do |entry|
       entry.url post_url(post)
       entry.title post.title
-      entry.content post.body, :type => 'html'
+      entry.content markdown(post.body), :type => 'html'
 
       entry.updated(post.updated_at.strftime("%Y-%m-%dT%H:%M:%SZ"))
 
